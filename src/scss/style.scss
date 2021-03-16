@@ -156,20 +156,21 @@ select {
 #hamburger-icon {
     position: relative;
     display: none;
-    width: 18px;
-    height: 14px;
+    width: 28px;
+    height: 24px;
 }
 
 #hamburger-icon .line {
     position: absolute;
     left: 0;
     display: block;
-    background: #ff6543;
-    width: 18px;
+    background: #474442;
+    width: 28px;
     height: 2px;
     transition: .4s;
     -webkit-transition: .4s;
     -moz-transition: .4s;
+    border-radius: 2px;
 }
 
 .mobile-menu {
@@ -1003,7 +1004,24 @@ input[type="search"]::-webkit-search-results-decoration {
     M O B I L E
 */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
+    .container {
+        max-width: 1200px;
+    }
+    .img-hide {
+        right: 15px;
+    }
+    .catalog-item-hide-title {
+        font-size: 22px;
+        left: 15px;
+    }
+    .top-wrap .title {
+        font-size: 52px;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
     html,
     body {
         min-width: 320px;
@@ -1013,11 +1031,49 @@ input[type="search"]::-webkit-search-results-decoration {
     a:focus {
         outline: none;
     }
+    .btn-catalog-anchor {
+        right: 0;
+    }
 }
 
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1150px) {
+    .top-wrap {
+        padding: 150px 0 150px 0;
+    }
+    .worktime,
+    .address,
+    .tel {
+        font-size: 12px;
+    }
+    .address,
+    .tel {
+        margin-right: 20px;
+    }
+    .nice-select {
+        margin-right: 20px;
+    }
+    .nice-select .current {
+        font-size: 14px;
+    }
+    .header-bottom .container {
+        padding-left: 175px;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .top-wrap .title {
+        font-size: 42px;
+        line-height: 48px;
+    }
+    .catalog-item-hide-title {
+        font-size: 18px;
+    }
+}
 
 @media screen and (max-width: 991px) {
+    .header {
+        border-bottom: 2px solid #B8B7B7;
+    }
     #hamburger-icon {
         display: block;
     }
@@ -1070,5 +1126,23 @@ input[type="search"]::-webkit-search-results-decoration {
     }
     .mobile-menu .menu a {
         font-size: 24px;
+    }
+    .catalog-content-hide a {
+        font-size: 14px;
+    }
+    .search-box {
+        max-width: 640px;
+    }
+    .input-box {
+        max-width: 375px;
+    }
+    .input-box input {
+        font-size: 12px;
+    }
+    .top-wrap .title {
+        width: 85%;
+    }
+    .header-top {
+        border: none;
     }
 }

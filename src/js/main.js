@@ -36,12 +36,17 @@ $(window).on('load resize', function() {
 
     }
 
-    if (width > '700') {
+    if (width < '992') {
+        $('.header .menu').appendTo($('.mobile-menu'));
+        $('.header .address').insertAfter($('.top-menu'));
+        $('.header .worktime').insertAfter($('.address'));
+        $('.header .nice-select').insertAfter($('.worktime'));
+    }
+
+    if (width > '991') {
 
     }
 
-    if (width < '700') {
 
-    }
 
 });
