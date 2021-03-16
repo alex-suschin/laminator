@@ -11,6 +11,13 @@ $(function() {
         }
     });
 
+    $("a.btn-catalog-anchor").click(function() {
+        elementClick = jQuery(this).attr("href")
+        destination = jQuery(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
+        return false;
+    });
+
     $('.mobile-menu .top-menu a').click(function() {
         $('#hamburger-icon').removeClass('active');
         $('.mobile-menu').removeClass('active');

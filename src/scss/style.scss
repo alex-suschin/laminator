@@ -819,11 +819,31 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .catalog-item {
-    width: 32%;
+    position: relative;
+    width: 32.218%;
     box-shadow: 0px 7px 60px -14px rgba(71, 68, 66, 0.49);
     @include transition;
+    overflow: hidden;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(1.19deg, rgba(0, 0, 0, 0.81) 20.18%, rgba(255, 255, 255, 0) 99.05%);
+        opacity: 0;
+        @include transition;
+    }
     &:hover {
         box-shadow: 0px 4px 35px rgba(71, 68, 66, 0.49);
+    }
+    &:hover::after {
+        opacity: 1;
+        z-index: 0;
     }
 }
 
@@ -831,6 +851,7 @@ input[type="search"]::-webkit-search-results-decoration {
     position: relative;
     height: 0;
     padding-bottom: 50%;
+    padding-bottom: 103.68%;
     img {
         position: absolute;
         top: 0;
@@ -842,6 +863,139 @@ input[type="search"]::-webkit-search-results-decoration {
         object-fit: cover;
         object-position: center;
     }
+}
+
+.catalog-item-content {
+    position: relative;
+}
+
+.catalog-content-show {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 63px 28px 63px 28px;
+    b {
+        display: block;
+        margin-right: 19px;
+        background: #AA0B0B;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-image: url(../img/big-arr.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    span {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 25px;
+        color: #474442;
+    }
+}
+
+.catalog-content-hide {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    padding: 16px 34px 16px 34px;
+    column-count: 2;
+    column-gap: 36px;
+    position: absolute;
+    background: #474442;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+    @include transition;
+    a {
+        display: block;
+        width: fit-content;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.catalog {
+    margin: -59px 0 0 0;
+    position: relative;
+    z-index: 5;
+    margin-bottom: 100px;
+}
+
+.catalog-item:hover .catalog-content-hide {
+    opacity: 1;
+    z-index: 5;
+}
+
+.catalog-item:hover .catalog-item-img::after {
+    opacity: 1;
+}
+
+.img-hide {
+    position: absolute;
+    top: -46px;
+    right: 63px;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    transform: translateX(250px);
+    -webkit-transform: translateX(250px);
+    -moz-transform: translateX(250px);
+    -ms-transform: translateX(250px);
+    -o-transform: translateX(250px);
+    @include transition;
+    z-index: 10;
+}
+
+.catalog-item-hide-title {
+    position: absolute;
+    top: -46px;
+    left: 34px;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    transform: translateX(-300px);
+    -webkit-transform: translateX(-300px);
+    -moz-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    -o-transform: translateX(-300px);
+    @include transition;
+    z-index: 10;
+}
+
+.catalog-item:hover .catalog-item-hide-title {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+.catalog-item:hover .img-hide {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
 }
 
 
