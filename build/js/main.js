@@ -37,12 +37,12 @@ $(window).on('load resize', function() {
         $('.header .menu').appendTo($('.mobile-menu'));
         $('.header .address').insertAfter($('.top-menu'));
         $('.header .worktime').insertAfter($('.address'));
-        $('.header .nice-select').insertAfter($('.worktime'));
+        $('.header .city-box').insertAfter($('.worktime'));
     }
 
     if (width > '991') {
         $('.mobile-menu .menu').appendTo('.header-top .container');
-        $('.mobile-menu .nice-select').prependTo('.header-bottom .container');
+        $('.mobile-menu .city-box').prependTo('.header-bottom .container');
         $('.mobile-menu .address').insertAfter('.header-bottom .tel');
         $('.mobile-menu .worktime').insertAfter('.header-bottom .address');
     }
