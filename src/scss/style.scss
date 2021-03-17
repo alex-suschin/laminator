@@ -1217,10 +1217,13 @@ input[type="search"]::-webkit-search-results-decoration {
         color: #fff;
         font-size: 14px;
     }
-    .header .nice-select {
+    .header .city-box {
         max-width: 280px;
         width: 100%;
         margin: 0 auto;
+    }
+    .header .city-box .nice-select {
+        width: 100%;
     }
     .nice-select .list {
         min-width: 100%;
