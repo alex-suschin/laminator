@@ -35,6 +35,15 @@ $(function() {
         $(this).children('.about-elem-hide').toggleClass('active');
     });
 
+    $('.partners-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        swipeToSlide: true,
+        accessibility: false
+    });
+
 });
 
 $(window).on('load resize', function() {
