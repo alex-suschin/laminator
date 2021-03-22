@@ -30,10 +30,7 @@ $(function() {
         $(this).toggleClass('active');
     });
 
-    $('.about-elem').hover(function() {
-        $(this).toggleClass('active');
-        $(this).children('.about-elem-hide').toggleClass('active');
-    });
+
 
     $('.partners-slider').slick({
         infinite: true,
@@ -50,12 +47,19 @@ $(window).on('load resize', function() {
 
     var width = $(window).width();
 
+    if (width > '1280') {
+        $('.about-elem').hover(function() {
+            $(this).toggleClass('active');
+            $(this).children('.about-elem-hide').toggleClass('active');
+        });
+    }
+
     if (width < '992') {
-        $('.header').addClass('load');
-        $('.header .menu').appendTo($('.mobile-menu'));
-        $('.header .address').insertAfter($('.top-menu'));
-        $('.header .worktime').insertAfter($('.address'));
-        $('.header .city-box').insertAfter($('.worktime'));
+        $('header').addClass('load');
+        $('header .menu').appendTo($('.mobile-menu'));
+        $('header .address').insertAfter($('.top-menu'));
+        $('header .worktime').insertAfter($('.address'));
+        $('header .city-box').insertAfter($('.worktime'));
     }
 
     if (width > '991') {
