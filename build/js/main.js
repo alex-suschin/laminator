@@ -26,6 +26,15 @@ $(function() {
 
     $('select').niceSelect();
 
+    $('.catalog-elem-fav').click(function() {
+        $(this).toggleClass('active');
+    });
+
+    $('.about-elem').hover(function() {
+        $(this).toggleClass('active');
+        $(this).children('.about-elem-hide').toggleClass('active');
+    });
+
 });
 
 $(window).on('load resize', function() {
