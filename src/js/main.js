@@ -38,7 +38,17 @@ $(function() {
         slidesToScroll: 1,
         variableWidth: true,
         swipeToSlide: true,
-        accessibility: false
+        accessibility: false,
+        responsive: [{
+            breakpoint: 705,
+            settings: {
+                arrows: false,
+                dots: true,
+                slidesToShow: 2,
+                variableWidth: true,
+                centerMode: true
+            }
+        }]
     });
 
 });
