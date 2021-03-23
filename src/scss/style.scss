@@ -2648,33 +2648,26 @@ M O B I L E
         justify-content: flex-end;
     }
     .catalog-content-show {
+        min-height: 190px;
         padding: 35px 20px 29px 24px;
     }
     .catalog-item-img {
         padding-bottom: 79.68%;
     }
-    // .img-hide {
-    //     display: none;
-    // }
     .catalog-content-hide {
         column-gap: 26px;
+        padding: 17px 24px 16px 15px;
     }
-    // .catalog-content-hide {
-    //     position: relative;
-    //     padding: 16px 24px 16px 24px;
-    //     height: 0;
-    //     opacity: 1;
-    //     top: 45px;
-    // }
+    .catalog-item-hide-title {
+        top: -32px;
+    }
+    .img-hide {
+        width: 92px;
+        height: 26px;
+        top: -30px;
+    }
     .catalog-item-content {
         height: auto;
-    }
-    .catalog-item:hover .catalog-content-show {
-        display: none;
-    }
-    .catalog-item:hover .catalog-content-hide {
-        height: auto;
-        top: 0;
     }
     .about-elems {
         display: none;
@@ -2721,6 +2714,23 @@ M O B I L E
 }
 
 @media screen and (max-width: 575px) {
+    .catalog-elem-content {
+        position: relative;
+        z-index: 5;
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            box-shadow: 0px 40px 80px rgba(184, 187, 190, 0.2);
+            z-index: -1;
+        }
+    }
     .information-item {
         min-height: 287px;
         width: 100%;
