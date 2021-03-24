@@ -56,9 +56,9 @@ $(function() {
         // console.log(dg);
     });
 
-    jQuery('<div class="quantity-nav"><div class="quantity-button number-plus">+</div><div class="quantity-button number-minus">-</div></div>').insertAfter('.number input');
-    jQuery('.number').each(function() {
-        var spinner = jQuery(this),
+    $('<div class="quantity-nav"><div class="quantity-button number-plus">+</div><div class="quantity-button number-minus">-</div></div>').insertAfter('.number input');
+    $('.number').each(function() {
+        var spinner = $(this),
             input = spinner.find('input[type="number"]'),
             btnUp = spinner.find('.number-plus'),
             btnDown = spinner.find('.number-minus'),
@@ -74,6 +74,7 @@ $(function() {
             }
             spinner.find("input").val(newVal);
             spinner.find("input").trigger("change");
+            console.log(newVal);
         });
 
         btnDown.click(function() {
@@ -88,6 +89,8 @@ $(function() {
         });
 
     });
+
+
 
     // (function quantityProducts() {
     //     var $quantityArrowMinus = $('.catalog-elem').each(function() {

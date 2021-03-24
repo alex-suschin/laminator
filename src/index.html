@@ -29,7 +29,10 @@
                 <div class="catalog-items">
                     <div class="catalog-item">
                         <div class="catalog-item-img">
-                            <img src="img/cat-img1.jpg" alt="">
+                            <picture>
+                                <source srcset="img/cat-img1.jpg" media="(min-width: 376px)">
+                                <img src="img/cat-img1-mob.jpg" alt="cat1">
+                            </picture>6
                         </div>
                         <div class="catalog-item-content">
                             <a href="#" class="catalog-item-hide-title">Линолеум</a>
@@ -54,7 +57,10 @@
 
                     <div class="catalog-item">
                         <div class="catalog-item-img">
-                            <img src="img/cat-img2.jpg" alt="">
+                            <picture>
+                                <source srcset="img/cat-img2.jpg" media="(min-width: 376px)">
+                                <img src="img/cat-img2-mob.jpg" alt="cat2">
+                            </picture>
                         </div>
                         <div class="catalog-item-content">
                             <a href="#" class="catalog-item-hide-title">Ламинат</a>
@@ -79,7 +85,10 @@
 
                     <div class="catalog-item">
                         <div class="catalog-item-img">
-                            <img src="img/cat-img3.jpg" alt="">
+                            <picture>
+                                <source srcset="img/cat-img3.jpg" media="(min-width: 376px)">
+                                <img src="img/cat-img3-mob.jpg" alt="cat3">
+                            </picture>
                         </div>
                         <div class="catalog-item-content">
                             <a href="#" class="catalog-item-hide-title">Виниловая плитка</a>
@@ -589,9 +598,7 @@
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-
                                                 <input class="quantity-num" type="number" min="1" value="1" readonly>
-
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -602,8 +609,8 @@
                             <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
-                    <a href="#" class="btn-more">Смотреть все</a>
                 </div>
+                <a href="#" class="btn-more">Смотреть все</a>
             </div>
         </section>
 
