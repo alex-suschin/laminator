@@ -7,7 +7,7 @@
     <div class="wrapper">
         @@include('components/page/_2_header.html')
 
-        <div class="top-wrap" style="background-image: url(img/top-wrap-bg.jpg);">
+        <section class="top-wrap">
             <div class="container">
                 <div class="title">Напольное покрытие от известных производителей</div>
                 <div class="desc">Все виды напольных покрытий</div>
@@ -22,9 +22,9 @@
                 </div>
                 <a href="#catalog" class="btn-catalog-anchor">Каталог товаров <i></i></a>
             </div>
-        </div>
+        </section>
 
-        <div class="catalog" id="catalog">
+        <section class="catalog" id="catalog">
             <div class="container">
                 <div class="catalog-items">
                     <div class="catalog-item">
@@ -34,10 +34,10 @@
                         <div class="catalog-item-content">
                             <a href="#" class="catalog-item-hide-title">Линолеум</a>
                             <img src="img/logo-opacity.png" alt="" class="img-hide">
-                            <div class="catalog-content-show">
+                            <a href="#" class="catalog-content-show">
                                 <b></b>
                                 <span>Линолеум</span>
-                            </div>
+                            </a>
                             <div class="catalog-content-hide">
                                 <a href="#">AGT PERGO ALSAFLOOR</a>
                                 <a href="#">DFRISTA TARKETT</a>
@@ -59,10 +59,10 @@
                         <div class="catalog-item-content">
                             <a href="#" class="catalog-item-hide-title">Ламинат</a>
                             <img src="img/logo-opacity.png" alt="" class="img-hide">
-                            <div class="catalog-content-show">
+                            <a href="#" class="catalog-content-show">
                                 <b></b>
                                 <span>Ламинат</span>
-                            </div>
+                            </a>
                             <div class="catalog-content-hide">
                                 <a href="#">AGT PERGO ALSAFLOOR</a>
                                 <a href="#">DFRISTA TARKETT</a>
@@ -84,10 +84,10 @@
                         <div class="catalog-item-content">
                             <a href="#" class="catalog-item-hide-title">Виниловая плитка</a>
                             <img src="img/logo-opacity.png" alt="" class="img-hide">
-                            <div class="catalog-content-show">
+                            <a href="#" class="catalog-content-show">
                                 <b></b>
                                 <span>Виниловая плитка</span>
-                            </div>
+                            </a>
                             <div class="catalog-content-hide">
                                 <a href="#">AGT PERGO ALSAFLOOR</a>
                                 <a href="#">DFRISTA TARKETT</a>
@@ -103,19 +103,21 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="recommend">
+        <section class="recommend">
             <div class="container-big">
-                <div class="title">Ламинатор рекомендует</div>
+                <h1>Ламинатор рекомендует</h1>
                 <div class="catalog-elems">
                     <div class="catalog-elem">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img1.jpg" alt="catalog-img1">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img1.jpg" alt="catalog-img1">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -123,19 +125,19 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,66</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -143,17 +145,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem catalog-elem--recom">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img2.jpg" alt="catalog-img2">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img2.jpg" alt="catalog-img2">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -161,19 +166,19 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,66</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -181,17 +186,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem catalog-elem--recom">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img3.jpg" alt="catalog-img3">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img3.jpg" alt="catalog-img3">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -199,20 +207,20 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,2</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
                                             <div class="old-price">350 ₽ м<sup>2</sup></div>
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -220,17 +228,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img4.jpg" alt="catalog-img4">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img4.jpg" alt="catalog-img4">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -238,20 +249,20 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>1,53</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
                                             <div class="old-price">350 ₽ м<sup>2</sup></div>
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -259,17 +270,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem catalog-elem--recom">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img5.jpg" alt="catalog-img5">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img5.jpg" alt="catalog-img5">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -277,19 +291,19 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,66</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -297,17 +311,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem catalog-elem--recom">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img6.jpg" alt="catalog-img6">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img6.jpg" alt="catalog-img6">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -315,19 +332,19 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,66</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -335,17 +352,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem catalog-elem--recom">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img7.jpg" alt="catalog-img7">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img7.jpg" alt="catalog-img7">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -353,19 +373,19 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,66</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -373,17 +393,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img8.jpg" alt="catalog-img8">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img8.jpg" alt="catalog-img8">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -391,19 +414,19 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,66</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -411,17 +434,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem catalog-elem--recom">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img9.jpg" alt="catalog-img9">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img9.jpg" alt="catalog-img9">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -429,19 +455,19 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,66</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -449,17 +475,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img10.jpg" alt="catalog-img10">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img10.jpg" alt="catalog-img10">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -467,19 +496,19 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,66</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -487,17 +516,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem catalog-elem--recom">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img11.jpg" alt="catalog-img11">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img11.jpg" alt="catalog-img11">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -505,19 +537,19 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,66</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -525,17 +557,20 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
 
                     <div class="catalog-elem">
-                        <div class="catalog-elem-img">
-                            <img src="img/catalog-img12.jpg" alt="catalog-img12">
-                        </div>
+                        <a href="#">
+                            <div class="catalog-elem-img">
+                                <img src="img/catalog-img12.jpg" alt="catalog-img12">
+                            </div>
+                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                        </a>
                         <div class="catalog-elem-content">
                             <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
-                            <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+
                             <div class="catalog-elem-country">Россия, Однополосный</div>
                             <div class="catalog-elem-size">
                                 <span>Размер:</span>
@@ -543,20 +578,20 @@
                             </div>
                             <div class="catalog-elem-pack">
                                 <span>Упаковка:</span>
-                                <b>2, 66 м<sup>2</sup></b>
+                                <b><i>2,66</i> м<sup>2</sup></b>
                             </div>
                             <div class="catalog-elem-form">
                                 <form action="/" method="POST">
                                     <div class="catalog-elem-price-col">
                                         <div class="price-box">
                                             <div class="old-price">350 ₽ м<sup>2</sup></div>
-                                            <div class="price">350 ₽/м<sup>2</sup></div>
+                                            <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
                                         </div>
                                         <div class="col-goods">
                                             <div class="number">
-                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                                <input type="number" min="1" value="1" readonly>
-                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+
+                                                <input class="quantity-num" type="number" min="1" value="1" readonly>
+
                                             </div>
                                             <span>Упаковок</span>
                                         </div>
@@ -564,17 +599,17 @@
                                     <button type="submit" class="btn-in-cart">В корзину</button>
                                 </form>
                             </div>
-                            <div class="catalog-elem-total-price">Итого: 7.98 м<sup>2</sup> за 150 ₽</div>
+                            <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
                         </div>
                     </div>
                     <a href="#" class="btn-more">Смотреть все</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="about">
+        <section class="about">
             <div class="about__left">
-                <div class="title">О магазине</div>
+                <h2>О магазине</h2>
                 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
                     aute irure dolor in</p>
 
@@ -585,7 +620,7 @@
 
                 <div class="about-elems">
                     <div class="about-elem" style="background-image: url(img/about-el1.jpg);">
-                        <div class="title">Линолеум</div>
+                        <a href="#" class="title">Линолеум</a>
                         <div class="about-elem-hide">
                             <a href="#">AGT PERGO ALSAFLOOR</a>
                             <a href="#">DFRISTA TARKETT</a>
@@ -600,7 +635,7 @@
                     </div>
 
                     <div class="about-elem" style="background-image: url(img/about-el2.jpg);">
-                        <div class="title">Ламинат</div>
+                        <a href="#" class="title">Ламинат</a>
                         <div class="about-elem-hide">
                             <a href="#">AGT PERGO ALSAFLOOR</a>
                             <a href="#">DFRISTA TARKETT</a>
@@ -615,7 +650,7 @@
                     </div>
 
                     <div class="about-elem" style="background-image: url(img/about-el3.jpg);">
-                        <div class="title">Виниловая плитка</div>
+                        <a href="#" class="title">Виниловая плитка</a>
                         <div class="about-elem-hide">
                             <a href="#">AGT PERGO ALSAFLOOR</a>
                             <a href="#">DFRISTA TARKETT</a>
@@ -631,9 +666,9 @@
                     <div class="about__right-right"></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="partners">
+        <section class="partners">
             <div class="container-big">
                 <div class="partners-slider">
                     <div class="partners-slider__item">
@@ -668,11 +703,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="information">
+        <section class="information">
             <div class="container-big">
-                <div class="title">Полезная информация</div>
+                <h3>Полезная информация</h3>
                 <div class="information-items">
                     <a href="#" class="information-item" style="background-image: url(img/info-img.jpg);">
                         <div class="information-date">25.02.21</div>
@@ -702,7 +737,7 @@
                 </div>
                 <a href="#" class="btn-more">Читать все</a>
             </div>
-        </div>
+        </section>
 
         @@include('components/page/_3_footer.html')
     </div>

@@ -51,7 +51,87 @@ $(function() {
         }]
     });
 
+    $('.catalog-elem-pack').each(function() {
+        var dg = $(this).find('i').text();
+        // console.log(dg);
+    });
+
+    jQuery('<div class="quantity-nav"><div class="quantity-button number-plus">+</div><div class="quantity-button number-minus">-</div></div>').insertAfter('.number input');
+    jQuery('.number').each(function() {
+        var spinner = jQuery(this),
+            input = spinner.find('input[type="number"]'),
+            btnUp = spinner.find('.number-plus'),
+            btnDown = spinner.find('.number-minus'),
+            min = input.attr('min'),
+            max = input.attr('max');
+
+        btnUp.click(function() {
+            var oldValue = parseFloat(input.val());
+            if (oldValue >= max) {
+                var newVal = oldValue;
+            } else {
+                var newVal = oldValue + 1;
+            }
+            spinner.find("input").val(newVal);
+            spinner.find("input").trigger("change");
+        });
+
+        btnDown.click(function() {
+            var oldValue = parseFloat(input.val());
+            if (oldValue <= min) {
+                var newVal = oldValue;
+            } else {
+                var newVal = oldValue - 1;
+            }
+            spinner.find("input").val(newVal);
+            spinner.find("input").trigger("change");
+        });
+
+    });
+
+    // (function quantityProducts() {
+    //     var $quantityArrowMinus = $('.catalog-elem').each(function() {
+    //         $(this).find('.number-minus');
+    //     });
+    //     var $quantityArrowPlus = $('.catalog-elem').each(function() {
+    //         $(this).find('.number-plus');
+    //     });
+    //     var $quantityNum = $('.catalog-elem').each(function() {
+    //         $(this).find('.quantity-num');
+    //     });
+
+    //     $quantityArrowMinus.click(quantityMinus);
+    //     $quantityArrowPlus.click(quantityPlus);
+
+    //     function quantityMinus() {
+    //         if ($quantityNum.val() > 1) {
+    //             $quantityNum.val(+$quantityNum.val() - 1);
+    //         }
+    //     }
+
+    //     function quantityPlus() {
+    //         $quantityNum.val(+$quantityNum.val() + 1);
+    //     }
+    // })();
+
 });
+
+$('.js-address').click(function(e) {
+    e.preventDefault();
+    $('#popup-wrap-map').addClass('popup-active');
+    $('#popup-map').addClass('popup-active');
+});
+
+
+$('.close-map').click(function(e) {
+    e.preventDefault();
+    $('#popup-wrap-map').removeClass('popup-active');
+    $('#popup-map').removeClass('popup-active');
+});
+
+
+
+
 
 $(window).on('load resize', function() {
 
@@ -69,12 +149,11 @@ $(window).on('load resize', function() {
         $('header .menu').appendTo($('.mobile-menu'));
         $('header .address').insertAfter($('.top-menu'));
         $('header .worktime').insertAfter($('.address'));
-        $('header .city-box').insertAfter($('.worktime'));
+
     }
 
     if (width > '991') {
         $('.mobile-menu .menu').appendTo('.header-top .container');
-        $('.mobile-menu .city-box').prependTo('.header-bottom .container');
         $('.mobile-menu .address').insertAfter('.header-bottom .tel');
         $('.mobile-menu .worktime').insertAfter('.header-bottom .address');
     }
