@@ -90,6 +90,24 @@ $(function() {
 
     });
 
+    $('.catalog-elem').each(function() {
+        var varMetr = $(this).find('.catalog-elem-pack b i').text().replace(',', '.');
+        console.log(varMetr);
+        var price = $(this).find('.price i').text();
+        var valCol = $(this).find('.quantity-num');
+        var totalPrice = $(this).find('.catalog-elem-total-price b');
+        var totalMetr = $(this).find('.catalog-elem-total-price i');
+        console.log(price);
+        var plus = $(this).find('.number-plus');
+        valCol.on('change', function () {
+            totalPrice.text($(this).val()*price);
+            var metrSumm = $(this).val()*varMetr;
+            var metrToPoint = metrSumm.toFixed(2);
+            totalMetr.text(metrToPoint);
+            console.log($(this).val()*price);
+        });
+    });
+
 
 
     // (function quantityProducts() {
