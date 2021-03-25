@@ -6,8 +6,11 @@ $(function() {
             $('.mobile-menu').addClass('active');
             $('html').addClass('ov-hidden');
         } else {
+            $('.menu-cat-mobile li a').removeClass('active');
+            $('.sub-menu').hide();
             $('.mobile-menu').removeClass('active');
             $('html').removeClass('ov-hidden');
+
         }
     });
 
@@ -137,14 +140,11 @@ $(window).on('load resize', function() {
     if (width < '992') {
         $('header').addClass('load');
         $('header .menu').appendTo($('.mobile-menu'));
-        // $('header .address').insertAfter($('.top-menu'));
-        // $('header .worktime').insertAfter($('.address'));
+        $('#popup-wrap-map').remove();
 
     }
 
     if (width > '991') {
         $('.mobile-menu .menu').appendTo('.header-top .container');
-        // $('.mobile-menu .address').insertAfter('.header-bottom .tel');
-        // $('.mobile-menu .worktime').insertAfter('.header-bottom .address');
     }
 });
