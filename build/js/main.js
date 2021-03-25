@@ -51,11 +51,6 @@ $(function() {
         }]
     });
 
-    $('.catalog-elem-pack').each(function() {
-        var dg = $(this).find('i').text();
-        // console.log(dg);
-    });
-
     $('<div class="quantity-nav"><div class="quantity-button number-plus">+</div><div class="quantity-button number-minus">-</div></div>').insertAfter('.number input');
     $('.number').each(function() {
         var spinner = $(this),
@@ -74,7 +69,6 @@ $(function() {
             }
             spinner.find("input").val(newVal);
             spinner.find("input").trigger("change");
-            console.log(newVal);
         });
 
         btnDown.click(function() {
@@ -92,48 +86,23 @@ $(function() {
 
     $('.catalog-elem').each(function() {
         var varMetr = $(this).find('.catalog-elem-pack b i').text().replace(',', '.');
-        console.log(varMetr);
         var price = $(this).find('.price i').text();
         var valCol = $(this).find('.quantity-num');
         var totalPrice = $(this).find('.catalog-elem-total-price b');
         var totalMetr = $(this).find('.catalog-elem-total-price i');
-        console.log(price);
         var plus = $(this).find('.number-plus');
-        valCol.on('change', function () {
-            totalPrice.text($(this).val()*price);
-            var metrSumm = $(this).val()*varMetr;
+        valCol.on('change', function() {
+            totalPrice.text($(this).val() * price);
+            var metrSumm = $(this).val() * varMetr;
             var metrToPoint = metrSumm.toFixed(2);
             totalMetr.text(metrToPoint);
-            console.log($(this).val()*price);
         });
     });
 
-
-
-    // (function quantityProducts() {
-    //     var $quantityArrowMinus = $('.catalog-elem').each(function() {
-    //         $(this).find('.number-minus');
-    //     });
-    //     var $quantityArrowPlus = $('.catalog-elem').each(function() {
-    //         $(this).find('.number-plus');
-    //     });
-    //     var $quantityNum = $('.catalog-elem').each(function() {
-    //         $(this).find('.quantity-num');
-    //     });
-
-    //     $quantityArrowMinus.click(quantityMinus);
-    //     $quantityArrowPlus.click(quantityPlus);
-
-    //     function quantityMinus() {
-    //         if ($quantityNum.val() > 1) {
-    //             $quantityNum.val(+$quantityNum.val() - 1);
-    //         }
-    //     }
-
-    //     function quantityPlus() {
-    //         $quantityNum.val(+$quantityNum.val() + 1);
-    //     }
-    // })();
+    $('.link-sub i').click(function() {
+        $(this).siblings('a').toggleClass('active');
+        $(this).siblings('.sub-menu').slideToggle();
+    });
 
 });
 
@@ -168,15 +137,15 @@ $(window).on('load resize', function() {
     if (width < '992') {
         $('header').addClass('load');
         $('header .menu').appendTo($('.mobile-menu'));
-        $('header .address').insertAfter($('.top-menu'));
-        $('header .worktime').insertAfter($('.address'));
+        // $('header .address').insertAfter($('.top-menu'));
+        // $('header .worktime').insertAfter($('.address'));
 
     }
 
     if (width > '991') {
         $('.mobile-menu .menu').appendTo('.header-top .container');
-        $('.mobile-menu .address').insertAfter('.header-bottom .tel');
-        $('.mobile-menu .worktime').insertAfter('.header-bottom .address');
+        // $('.mobile-menu .address').insertAfter('.header-bottom .tel');
+        // $('.mobile-menu .worktime').insertAfter('.header-bottom .address');
     }
 });
 //# sourceMappingURL=../sourcemaps/main.js.map
