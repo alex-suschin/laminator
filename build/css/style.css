@@ -9,6 +9,14 @@
 
 @font-face {
   font-family: "Gilroy";
+  src: url("../fonts/Gilroy-ExtraBold.eot");
+  src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Gilroy";
   src: url("../fonts/Gilroy-Bold.eot");
   src: url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
   font-weight: 700;
@@ -17,9 +25,9 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-ExtraBold.eot");
-  src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Gilroy-Light.eot");
+  src: url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
@@ -44,14 +52,6 @@
   src: url("../fonts/Gilroy-Regular.eot");
   src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Light.eot");
-  src: url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
-  font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
@@ -1431,7 +1431,7 @@ sup {
   overflow: hidden;
   margin-bottom: 43px; }
   .about .title,
-  .about h2 {
+  .about h2.white {
     margin-top: 0;
     font-weight: 600;
     font-size: 36px;
@@ -2045,16 +2045,18 @@ footer {
 .search-mobile {
   width: 100%;
   padding: 0 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-bottom: 10px; }
+  .search-mobile form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .search-mobile input {
     display: block;
     max-width: initial;
@@ -2118,7 +2120,7 @@ footer {
     .menu-cat-mobile a.active {
       background: #AA0B0B;
       border-color: #AA0B0B; }
-    .menu-cat-mobile a.active + i {
+    .menu-cat-mobile a.active i {
       transform: rotate(180deg);
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
@@ -2126,7 +2128,7 @@ footer {
       -o-transform: rotate(180deg); }
   .menu-cat-mobile .sub-menu {
     display: none;
-    background: #AA0B0B; }
+    background: rgba(0, 0, 0, 0.22); }
     .menu-cat-mobile .sub-menu a {
       font-weight: 500;
       font-size: 14px;

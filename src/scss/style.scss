@@ -1339,7 +1339,7 @@ sup {
     overflow: hidden;
     margin-bottom: 43px;
     .title,
-    h2 {
+    h2.white {
         margin-top: 0;
         font-weight: 600;
         font-size: 36px;
@@ -1998,10 +1998,13 @@ footer {
 .search-mobile {
     width: 100%;
     padding: 0 12px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     margin-bottom: 10px;
+    form {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
     input {
         display: block;
         max-width: initial;
@@ -2061,7 +2064,7 @@ footer {
             background: #AA0B0B;
             border-color: #AA0B0B;
         }
-        &.active+i {
+        &.active i {
             transform: rotate(180deg);
             -webkit-transform: rotate(180deg);
             -moz-transform: rotate(180deg);
@@ -2071,7 +2074,7 @@ footer {
     }
     .sub-menu {
         display: none;
-        background: #AA0B0B;
+        background: rgba(0, 0, 0, 0.22);
         a {
             font-weight: 500;
             font-size: 14px;
