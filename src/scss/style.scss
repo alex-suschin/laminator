@@ -2322,6 +2322,9 @@ M O B I L E
 @media screen and (max-width: 1024px) {}
 
 @media screen and (max-width: 991px) {
+    .catalog-content-hide {
+        display: none;
+    }
     .header-bottom {
         width: 100%;
     }
@@ -2449,16 +2452,6 @@ M O B I L E
         margin: 0 10px;
         margin-bottom: 30px;
     }
-    header {
-        opacity: 0;
-        visibility: hidden;
-        @include transition;
-        height: 44px;
-    }
-    header.load {
-        opacity: 1;
-        visibility: visible;
-    }
     .address {
         background: url(../img/gps-white.svg) no-repeat left center;
     }
@@ -2477,6 +2470,7 @@ M O B I L E
         padding-left: 0;
     }
     header {
+        height: 44px;
         border-bottom: 2px solid #B8B7B7;
     }
     #hamburger-icon {
@@ -2509,6 +2503,14 @@ M O B I L E
         -moz-transition: .3s ease-in-out;
         -ms-transition: all .3s ease-in-out;
         -o-transition: .3s ease-in-out;
+    }
+    .top-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .top-menu.load {
+        opacity: 1;
+        visibility: visible;
     }
     .mobile-menu.active {
         transform: translate(0, 0);

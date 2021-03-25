@@ -138,7 +138,7 @@ $(window).on('load resize', function() {
     }
 
     if (width < '992') {
-        $('header').addClass('load');
+        $('.top-menu').addClass('load');
         $('header .menu').appendTo($('.mobile-menu'));
         $('#popup-wrap-map').remove();
 
