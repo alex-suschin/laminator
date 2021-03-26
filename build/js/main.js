@@ -119,56 +119,6 @@ $('.js-address').click(function(e) {
 });
 
 
-// function showModal(id) {
-//     $(document.body).addClass('is-open-modal');
-//     $(id).addClass('popup-active');
-// }
-
-// function hideModals() {
-//     $(document.body).removeClass('is-open-modal');
-//     $('.popup-wrap').removeClass('popup-active');
-// }
-
-// $(".js-address").on('click', function(e) {
-//     showModal('#popup-wrap-map');
-// });
-
-// $(document).on('click', function(e) {
-//     if (!(
-//             ($(e.target).parents('.popup').length) ||
-//             ($(e.target).hasClass('popup')) ||
-//             ($(e.target).hasClass('.js-address')))) {
-//         hideModals();
-//     }
-// });
-
-
-
-// $('.profile').click(function(i) {
-//     $(this).addClass('active');
-//     var profileHide = $('.profile-hide');
-
-//     if (profileHide.css('display') != 'block') {
-//         profileHide.show(300);
-
-
-//         var firstClick = true;
-//         $(document).bind('click.Profile', function(i) {
-//             if (!firstClick && $(i.target).closest('.profile-hide').length == 0) {
-//                 profileHide.hide(300);
-//                 $('.profile').removeClass('active');
-//                 $(document).unbind('click.Profile');
-//             }
-
-//             firstClick = false;
-//         });
-//     }
-
-//     i.preventDefault();
-
-// });
-
-
 $('.close-map').click(function(e) {
     e.preventDefault();
     $('#popup-wrap-map').removeClass('popup-active');
@@ -176,7 +126,6 @@ $('.close-map').click(function(e) {
 });
 
 $(document).click(function(event) {
-    //if you click on anything except the modal itself or the "open modal" link, close the modal
     if (!$(event.target).closest("#popup-map,.js-address").length) {
         $("body").find("#popup-wrap-map").removeClass("popup-active");
         $("body").find("#popup-map").removeClass("popup-active");
