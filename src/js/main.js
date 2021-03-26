@@ -109,6 +109,23 @@ $(function() {
     });
 
 
+    $('.card-slider-big').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.card-slider-thumbs'
+    });
+    $('.card-slider-thumbs').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.card-slider-big',
+        dots: false,
+        variableWidth: true,
+        focusOnSelect: true
+    });
+
+
 
 });
 
