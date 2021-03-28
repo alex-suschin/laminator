@@ -9,16 +9,16 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Bold.eot");
-  src: url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+  src: url("../fonts/Gilroy-ExtraBold.eot");
+  src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-ExtraBold.eot");
-  src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+  src: url("../fonts/Gilroy-Bold.eot");
+  src: url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap; }
@@ -28,14 +28,6 @@
   src: url("../fonts/Gilroy-Heavy.eot");
   src: url("../fonts/Gilroy-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Light.eot");
-  src: url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
-  font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
@@ -60,6 +52,14 @@
   src: url("../fonts/Gilroy-SemiBold.eot");
   src: url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.eot");
+  src: url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
@@ -2950,6 +2950,148 @@ header .city-box {
   margin: 0 auto; }
   .btn-rewiew:hover {
     background: #000; }
+
+.card-sert {
+  position: relative;
+  background: #454240;
+  padding: 23px 0 15px 0;
+  margin-bottom: 61px;
+  z-index: 5; }
+  .card-sert .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .card-sert img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 594px;
+    min-height: 190px;
+    z-index: -1; }
+  .card-sert .title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    width: 16%;
+    padding: 0 10px 0 0; }
+
+.sert-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .sert-items a {
+    display: block;
+    width: 55px;
+    height: 69px;
+    background: url(../img/pdf-ico.svg) no-repeat center;
+    margin-right: 35px; }
+    .sert-items a:last-child {
+      margin-right: 0; }
+
+.card-recom .container-big {
+  max-width: 1734px; }
+
+.card-recom h3 {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #474442;
+  margin-bottom: 0; }
+
+.cards-slider .catalog-elems {
+  display: block;
+  margin: 0 auto;
+  padding: 0 60px 15px 60px; }
+
+.cards-slider .slick-dots {
+  left: 0;
+  bottom: 10px; }
+
+.cards-slider .slick-dots li {
+  margin: 0 1px; }
+
+.cards-slider .slick-dots li button:before {
+  font-size: 46px; }
+
+.cards-slider .slick-dots li button:hover:before,
+.cards-slider .slick-dots li button:focus:before {
+  color: #D85245; }
+
+.cards-slider .slick-dots li.slick-active button:before {
+  color: #D85245;
+  opacity: 1; }
+
+.cards-slider .slick-list {
+  padding: 32px 0 55px 0; }
+
+.cards-slider .catalog-elem {
+  margin: 0 14.5px;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.cards-slider .catalog-elem.slick-active {
+  -webkit-box-shadow: 0px 4px 59px -7px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 4px 59px -7px rgba(0, 0, 0, 0.12); }
+
+.cards-slider .slick-prev,
+.cards-slider .slick-next {
+  width: 45px;
+  height: 45px;
+  background: #AA0B0B;
+  z-index: 2; }
+  .cards-slider .slick-prev:hover,
+  .cards-slider .slick-next:hover {
+    opacity: .7; }
+
+.cards-slider .slick-prev {
+  left: 0; }
+
+.cards-slider .slick-next {
+  right: 0; }
+
+.cards-slider .slick-next:before {
+  background: url(../img/small-next.svg) no-repeat center;
+  width: 13px;
+  height: 26px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: cover; }
+
+.cards-slider .slick-prev:before {
+  background: url(../img/small-prev.svg) no-repeat center;
+  width: 13px;
+  height: 26px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: cover; }
+
+.card-recom {
+  margin-bottom: 36px; }
 
 /* 
 M O B I L E

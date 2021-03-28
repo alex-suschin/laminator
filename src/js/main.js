@@ -168,6 +168,18 @@ $(function() {
         adaptiveHeight: true
     });
 
+    $('.cards-slider .catalog-elems').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        variableWidth: true,
+        infinite: false,
+        dots: true,
+        swipeToSlide: true,
+        adaptiveHeight: true
+    });
+
+
+
 
 });
 
