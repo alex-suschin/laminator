@@ -2337,14 +2337,29 @@ header .city-box {
 }
 
 .card-slider-big {
+    position: relative;
     margin-bottom: 15px;
 }
 
+.card-slider-big.catalog-elem--recom::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    top: 21px;
+    padding: 11px 25px 10px 24px;
+}
+
 .card-slider-big-item {
-    position: relative;
-    height: 0;
-    padding-bottom: 14.2815%;
-    outline: none;
+    a {
+        display: block;
+        position: relative;
+        height: 0;
+        padding-bottom: 71.408%;
+        outline: none;
+    }
     img {
         position: absolute;
         top: 0;
@@ -2392,6 +2407,7 @@ header .city-box {
     padding-bottom: 0.66%;
     margin: 0 5.5px;
     outline: none;
+    cursor: pointer;
     img {
         position: absolute;
         top: 0;
@@ -2637,6 +2653,9 @@ header .city-box {
     line-height: 32px;
     color: #474442;
     width: 37%;
+    div {
+        display: inline-block;
+    }
     i {
         font-style: normal;
     }
@@ -2750,9 +2769,9 @@ header .city-box {
     width: 100%;
     margin: 0 auto;
     .slick-list {
-        padding-bottom: 25px;
+        padding-bottom: 50px;
     }
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     .slick-prev,
     .slick-next {
         width: 45px;
@@ -3003,20 +3022,28 @@ header .city-box {
     margin-bottom: 36px;
 }
 
+.fancybox-slide--image {
+    padding: 18.5px 0;
+}
+
+.slick-dots li button::before {
+    @include transition;
+}
+
 
 /* 
 M O B I L E
 */
 
 @media screen and (max-width: 1800px) {
-    .slick-next {
+    .partners-slider .slick-next {
         right: 20px;
     }
-    .slick-prev {
+    .partners-slider .slick-prev {
         left: 20px;
     }
-    .slick-prev,
-    .slick-next {
+    .partners-slider .slick-prev,
+    .partners-slider .slick-next {
         top: 120%;
     }
     .about-elem.active {
@@ -3028,6 +3055,18 @@ M O B I L E
     }
     .about__right {
         width: 60.4%;
+    }
+}
+
+@media screen and (max-width: 1760px) {
+    .cards-slider .slick-list {
+        padding: 32px 0 55px 0!important;
+    }
+    .catalog-elem.slick-current {
+        transform: translateY(-8px);
+    }
+    .card-sert .title {
+        width: 20%;
     }
 }
 
@@ -3071,6 +3110,28 @@ M O B I L E
         font-size: 52px;
         line-height: 60px;
     }
+    .card-order .price-box {
+        width: 20%;
+    }
+    .card-total-price {
+        padding: 0 10px;
+    }
+    .card-total-price b,
+    .card-total-price i {
+        font-size: 18px;
+    }
+    .card-ex__item {
+        margin-right: 20px;
+        font-size: 12px;
+        width: 30%;
+    }
+    .card-slider-thumbs-item {
+        max-width: 129.2px;
+        padding-bottom: 0.5168%;
+    }
+    .rewiews-slider__item {
+        max-width: 547px;
+    }
 }
 
 @media screen and (max-width: 1400px) {
@@ -3092,6 +3153,9 @@ M O B I L E
         max-width: initial;
         width: 18%;
     }
+    .cards-slider .catalog-elem {
+        max-width: 240px;
+    }
     .catalog-elem:nth-child(6n) {
         margin-right: 28px;
     }
@@ -3110,6 +3174,16 @@ M O B I L E
     }
     .footer-bottom {
         justify-content: center;
+    }
+    .rewiews-slider .slick-prev,
+    .rewiews-slider .slick-next {
+        top: 100%;
+    }
+    .rewiews-slider .slick-prev {
+        left: 0;
+    }
+    .rewiews-slider .slick-next {
+        right: 0;
     }
 }
 
@@ -3171,6 +3245,59 @@ M O B I L E
     a:focus {
         outline: none;
     }
+    .slick-dotted.rewiews-slider {
+        margin-bottom: 80px;
+    }
+    .rewiews-slider .slick-prev,
+    .rewiews-slider .slick-next {
+        top: 120%;
+    }
+    .rewiews-slider .slick-dots {
+        bottom: -35px;
+    }
+    .rewiews-slider .slick-dots li button:before {
+        width: 15px;
+        height: 15px;
+        font-size: 0;
+        background: transparent;
+        border: 2px solid #7C7C7C;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        opacity: 1;
+    }
+    .rewiews-slider .slick-dots li.slick-active button:before {
+        border: 2px solid #A30D0D;
+        opacity: 1;
+        background: #A30D0D;
+    }
+    .header-line-vn {
+        display: none;
+    }
+    .rewiews-slider__item {
+        max-width: initial;
+        width: 49%;
+    }
+    .card-content {
+        flex-direction: column;
+    }
+    .card-content__left {
+        width: 100%;
+    }
+    .card-content__right {
+        width: 100%;
+    }
+    .card-slider-big {
+        width: calc(60% + 5px);
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .card-slider-thumbs {
+        width: calc(60% + 10px);
+        margin: 0 auto;
+    }
     .catalog-elem {
         max-width: initial;
         width: 22.7%;
@@ -3183,6 +3310,35 @@ M O B I L E
     }
     .btn-catalog-anchor {
         right: 0;
+    }
+    .fancybox-slide--image {
+        padding: 50px 0;
+    }
+    .card-sert img {
+        width: 237px;
+        min-height: 76px;
+        transform: rotate( -90deg);
+        bottom: initial;
+        right: -7.9%;
+    }
+    .rewiews-slider {
+        max-width: initial;
+        padding: 0 0;
+        width: initial;
+        margin: 0 -15px;
+        margin-bottom: 0px;
+    }
+    .rewiews-slider .slick-next {
+        right: 23px;
+    }
+    .rewiews-slider .slick-prev {
+        left: 23px;
+    }
+    .card-slider-thumbs-item {
+        max-width: initial;
+        width: 24%;
+        margin: 0 5px;
+        padding-bottom: 6.7768%;
     }
     // .catalog-elem {
     //     max-width: initial;
@@ -3218,6 +3374,14 @@ M O B I L E
     .header-bottom .container {
         padding-left: 175px;
     }
+    .card-sert .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-sert .title {
+        width: 100%;
+        margin-bottom: 25px;
+    }
 }
 
 @media screen and (max-width: 1090px) {
@@ -3233,6 +3397,15 @@ M O B I L E
 @media screen and (max-width: 1024px) {}
 
 @media screen and (max-width: 991px) {
+    .cards-slider .slick-dots li button:hover:before,
+    .cards-slider .slick-dots li button:focus:before {
+        color: #000;
+        opacity: .25;
+    }
+    .cards-slider .slick-dots li.slick-active button:before {
+        color: #D85245;
+        opacity: 1;
+    }
     .catalog-content-hide {
         display: none;
     }
@@ -3241,6 +3414,33 @@ M O B I L E
     }
     .header-bottom .container {
         justify-content: flex-end;
+    }
+    .rewiew-name {
+        font-size: 16px;
+    }
+    .rewiew-product {
+        font-size: 16px;
+    }
+    .rewiews-top {
+        margin-bottom: 8px;
+    }
+    .rewiew-product {
+        margin-bottom: 10px;
+    }
+    .rewiews-slider__item {
+        padding: 11px 11px 5px 11px;
+    }
+    .card-slider-big.catalog-elem--recom::after {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 7px 10px 7px 10px;
+    }
+    .rewiew-date {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(71, 68, 66, 0.6);
     }
     header .logo {
         display: block;
@@ -3540,6 +3740,21 @@ M O B I L E
     }
 }
 
+@media screen and (max-width: 835px) {
+    .card-ex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-ex__item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 12px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .top-wrap .title {
         font-size: 38px;
@@ -3609,6 +3824,52 @@ M O B I L E
     .about-elem .title {
         font-size: 18px;
     }
+    .card-form {
+        flex-wrap: wrap;
+    }
+    .card-order .price-box {
+        width: 80%;
+    }
+    .card-total-price {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0 0 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .card-order {
+        padding: 0 0 19px 0;
+    }
+    .card-total-price div:first-child {
+        font-weight: 500;
+    }
+    .card-total-price div:last-child {
+        font-weight: 900;
+    }
+    .product-order-box {
+        max-width: 100%;
+        margin-top: 5px;
+    }
+    .card-order .col-goods span {
+        margin-top: 0px;
+    }
+    .card-order .quantity-button {
+        color: #000;
+    }
+    .card-order .old-price {
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 32px;
+        margin-right: 13px;
+    }
+    .card-order .price {
+        font-size: 16px;
+        font-weight: 800;
+    }
+    .card-order .col-goods {
+        margin: 13px 0 8px 0px;
+    }
 }
 
 @media screen and (max-width: 730px) {
@@ -3638,6 +3899,72 @@ M O B I L E
 }
 
 @media screen and (max-width: 705px) {
+    .card-brand-rait {
+        flex-direction: row-reverse;
+    }
+    .brand {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .card-box-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .breadcrumbs {
+        width: 93%;
+        flex-wrap: wrap;
+    }
+    .card-content {
+        margin-bottom: 25px;
+    }
+    .card-properties {
+        column-count: 1;
+    }
+    .card-text {
+        column-count: 1;
+    }
+    .card-top {
+        position: relative;
+    }
+    .social {
+        width: 65px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .social a {
+        margin-right: 0;
+        margin: 0 4px;
+        margin-bottom: 12px;
+        &:last-child {
+            margin: 0 4px;
+            margin-bottom: 12px;
+        }
+    }
+    .rewiews-slider__item {
+        max-width: initial;
+        width: 100%;
+        margin: 0 10px;
+    }
+    .rewiews-slider {
+        padding: 0 5px;
+    }
+    .card-box-top h1 {
+        width: 59%;
+        font-weight: normal;
+        font-size: 20px;
+        text-align: left;
+        line-height: 24px;
+        color: #474442;
+        margin-bottom: 10px;
+    }
+    .card-slider-big,
+    .card-slider-thumbs {
+        width: 100%;
+    }
     .catalog-elem--recom::after {
         font-weight: normal;
         font-size: 11px;
