@@ -1537,6 +1537,46 @@
         </div>
     </div>
 </div>
+
+        <div class="popup-wrap" id="popup-wrap-rewiew">
+            <div class="popup" id="popup-rewiew">
+                <a href="#" class="close-rew-popup"></a>
+                <div class="title">Отзыв о товаре</div>
+                <form action="/" method="POST">
+                    <div class="popup-rewiew-item popup-rewiew-item-flex">
+                        <div>
+                            <label for="name-rew">Имя:</label>
+                            <input type="text" id="name-rew" placeholder="Имя">
+                        </div>
+                        <div>
+                            <label>Ваша оценка:</label>
+                            <div class="rating-area">
+                                <input type="radio" id="star-popup-5" name="rating-popup" value="5">
+                                <label for="star-popup-5" title="Оценка «5»"></label>
+                                <input type="radio" id="star-popup-4" name="rating-popup" value="4">
+                                <label for="star-popup-4" title="Оценка «4»"></label>
+                                <input type="radio" id="star-popup-3" name="rating-popup" value="3">
+                                <label for="star-popup-3" title="Оценка «3»"></label>
+                                <input type="radio" id="star-popup-2" name="rating-popup" value="2">
+                                <label for="star-popup-2" title="Оценка «2»"></label>
+                                <input type="radio" id="star-popup-1" name="rating-popup" value="1">
+                                <label for="star-popup-1" title="Оценка «1»"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-rewiew-item">
+                        <label for="name-product">Товар:</label>
+                        <input type="text" id="name-product" placeholder="Товар, о котором пишите отзыв">
+                    </div>
+                    <div class="popup-rewiew-item">
+                        <label for="message">Напишите отзыв:</label>
+                        <textarea name="message" id="message"></textarea>
+                    </div>
+                    <button type="submit">Отправить отзыв</button>
+                </form>
+            </div>
+        </div>
+
     </div>
 
     <script src="js/vendor.min.js"></script>

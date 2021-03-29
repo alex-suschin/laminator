@@ -233,6 +233,25 @@ $(document).click(function(event) {
 });
 
 
+$('.btn-rewiew').click(function(e) {
+    e.preventDefault();
+    $('#popup-wrap-rewiew').addClass('popup-active');
+    $('#popup-rewiew').addClass('popup-active');
+});
+
+$('.close-rew-popup').click(function(e) {
+    e.preventDefault();
+    $('#popup-wrap-rewiew').removeClass('popup-active');
+    $('#popup-rewiew').removeClass('popup-active');
+});
+
+$(document).click(function(event) {
+    if (!$(event.target).closest("#popup-rewiew,.btn-rewiew").length) {
+        $("body").find("#popup-wrap-rewiew").removeClass("popup-active");
+        $("body").find("#popup-rewiew").removeClass("popup-active");
+    }
+});
+
 
 $(window).on('load resize', function() {
 
