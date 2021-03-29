@@ -175,13 +175,36 @@ $(function() {
         swipeToSlide: true,
         adaptiveHeight: true,
         responsive: [{
-            breakpoint: 1761,
-            settings: {
-                centerMode: true,
-                infinite: true,
-                swipeToSlide: true
+                breakpoint: 601,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2,
+                    centerMode: false,
+                    infinite: true,
+                    variableWidth: false
+                }
+            },
+            {
+                breakpoint: 836,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    centerMode: false,
+                    infinite: true,
+                    variableWidth: false
+                }
+            },
+            {
+                breakpoint: 1761,
+                settings: {
+                    slidesToShow: 6,
+                    variableWidth: true,
+                    centerMode: true,
+                    infinite: true,
+                    swipeToSlide: true
+                }
             }
-        }]
+        ]
     });
 
 
