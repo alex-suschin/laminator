@@ -220,6 +220,20 @@ $(function() {
         }
     });
 
+    $('.js-show-filter').click(function() {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $(this).siblings('.filter-item-hide').slideDown();
+        } else {
+            $(this).siblings('.filter-item-hide').slideUp();
+
+        }
+    });
+
+    $('.cat-products a').click(function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+    });
 
 });
 

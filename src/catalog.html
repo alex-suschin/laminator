@@ -4,7 +4,7 @@
 @@include('components/page/_1_head.html',{ 'title': 'Ламинатор', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper wrapper-vn">
         @@include('components/page/_2_header-vn.html')
 
         <section class="catalog-wrap">
@@ -54,37 +54,810 @@
         <section class="catalog-box">
             <div class="container">
                 <div class="catalog-box__left">
-                    <div class="title">Категоррии:</div>
-                    <div class="cat-products">
-                        <a href="#">Водостойкий</a>
-                        <a href="#">Глянцевый</a>
-                        <a href="#" class="active">Самоклеющийся</a>
-                        <a href="#">Декоративный</a>
-                        <a href="#">Художественный</a>
-                        <a href="#">Замковый</a>
-                        <a href="#">В ванную</a>
-                        <a href="#">В гостиную</a>
-                        <a href="#">В спальню</a>
-                        <a href="#">В офис</a>
-                        <a href="#">На кухню</a>
-                        <a href="#">Дуб</a>
-                    </div>
-                    <div class="title">Фильтр по параметрам:</div>
-                    <div class="filter-price">
-                        <span>Цена</span>
-                        <input type="text" readonly class="start-price" placeholder="">
-                        <input type="text" readonly class="finish-price" placeholder="">
-                        <i>₽</i>
-                    </div>
-                    <div class="price-range">
-                        <input type="text" class="range-slider js-range-slider" name="range" value="" />
-                    </div>
                     <div class="btn-filter-mob"></div>
+                    <div class="filters">
+                        <div class="title">Категоррии:</div>
+                        <div class="cat-products">
+                            <a href="#">Водостойкий</a>
+                            <a href="#">Глянцевый</a>
+                            <a href="#" class="active">Самоклеющийся</a>
+                            <a href="#">Декоративный</a>
+                            <a href="#">Художественный</a>
+                            <a href="#">Замковый</a>
+                            <a href="#">В ванную</a>
+                            <a href="#">В гостиную</a>
+                            <a href="#">В спальню</a>
+                            <a href="#">В офис</a>
+                            <a href="#">На кухню</a>
+                            <a href="#">Дуб</a>
+                        </div>
+                        <div class="title">Фильтр по параметрам:</div>
+                        <div class="filter-price">
+                            <span>Цена</span>
+                            <input type="text" readonly class="start-price" placeholder="">
+                            <input type="text" readonly class="finish-price" placeholder="">
+                            <i>₽</i>
+                        </div>
+                        <div class="price-range">
+                            <input type="text" class="range-slider js-range-slider" name="range" value="" />
+                        </div>
+
+                        <div class="filter-item">
+                            <div class="filter-item-show js-show-filter">Бренд</div>
+                            <div class="filter-item-hide">
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>AGT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>PERGO</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>ALSAFLOOR</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>BARISTA</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>TARKETT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>CLASSEN</span></label>
+                            </div>
+                        </div>
+
+                        <div class="filter-item">
+                            <div class="filter-item-show js-show-filter">Страна производителя</div>
+                            <div class="filter-item-hide">
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>Россия</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>США</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>Германия</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>Италия</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>Австрия</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>Япония</span></label>
+                            </div>
+                        </div>
+
+                        <div class="filter-item">
+                            <div class="filter-item-show js-show-filter">Плотность</div>
+                            <div class="filter-item-hide">
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>AGT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>PERGO</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>ALSAFLOOR</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>BARISTA</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>TARKETT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>CLASSEN</span></label>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-item-show js-show-filter">Класс износостойкости</div>
+                            <div class="filter-item-hide">
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>AGT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>PERGO</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>ALSAFLOOR</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>BARISTA</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>TARKETT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>CLASSEN</span></label>
+                            </div>
+                        </div>
+
+                        <div class="filter-item">
+                            <div class="filter-item-show js-show-filter">Длина</div>
+                            <div class="filter-item-hide">
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>AGT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>PERGO</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>ALSAFLOOR</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>BARISTA</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>TARKETT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>CLASSEN</span></label>
+                            </div>
+                        </div>
+
+                        <div class="filter-item">
+                            <div class="filter-item-show js-show-filter">Толщина</div>
+                            <div class="filter-item-hide">
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>AGT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>PERGO</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>ALSAFLOOR</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>BARISTA</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>TARKETT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>CLASSEN</span></label>
+                            </div>
+                        </div>
+
+                        <div class="filter-item">
+                            <div class="filter-item-show js-show-filter">Класс износостойкости</div>
+                            <div class="filter-item-hide">
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>AGT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>PERGO</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>ALSAFLOOR</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>BARISTA</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>TARKETT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>CLASSEN</span></label>
+                            </div>
+                        </div>
+
+                        <div class="filter-item">
+                            <div class="filter-item-show js-show-filter">Площадь упаковки</div>
+                            <div class="filter-item-hide">
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>AGT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>PERGO</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>ALSAFLOOR</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>BARISTA</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>TARKETT</span></label>
+                                <label class="checkbox"><input type="checkbox"><i></i><b></b> <span>CLASSEN</span></label>
+                            </div>
+                        </div>
+                        <button type="submit">Применить</button>
+                    </div>
                 </div>
                 <div class="catalog-box__right">
                     <div class="sort">
+                        <span>Сортировка:</span>
+                        <select name="sort-prod" id="sort-prod">
+                            <option value="По рейтингу">По рейтингу</option>
+                            <option value="По цене ↑">По цене ↑</option>
+                            <option value="По цене ↓">По цене ↓</option>
+                            <option value="По дате">По дате</option>
+                        </select>
+                    </div>
+
+                    <div class="catalog-elems">
+                        <div class="catalog-elem">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img1.jpg" alt="catalog-img1">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem catalog-elem--recom">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img2.jpg" alt="catalog-img2">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="price"><i>240</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem catalog-elem--recom">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img3.jpg" alt="catalog-img3">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,2</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="old-price">520 ₽ м<sup>2</sup></div>
+                                                <div class="price"><i>480</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img4.jpg" alt="catalog-img4">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>1,53</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="old-price">350 ₽ м<sup>2</sup></div>
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem catalog-elem--recom">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img5.jpg" alt="catalog-img5">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem catalog-elem--recom">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img6.jpg" alt="catalog-img6">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem catalog-elem--recom">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img7.jpg" alt="catalog-img7">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img8.jpg" alt="catalog-img8">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem catalog-elem--recom">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img9.jpg" alt="catalog-img9">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img10.jpg" alt="catalog-img10">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem catalog-elem--recom">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img11.jpg" alt="catalog-img11">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img12.jpg" alt="catalog-img12">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="old-price">350 ₽ м<sup>2</sup></div>
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img12.jpg" alt="catalog-img12">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="old-price">350 ₽ м<sup>2</sup></div>
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img12.jpg" alt="catalog-img12">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="old-price">350 ₽ м<sup>2</sup></div>
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img12.jpg" alt="catalog-img12">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="old-price">350 ₽ м<sup>2</sup></div>
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-elem">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img12.jpg" alt="catalog-img12">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="old-price">350 ₽ м<sup>2</sup></div>
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                            </div>
+                        </div>
+
 
                     </div>
+                    <a href="#" class="btn-more">Смотреть все</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog-text">
+            <div class="container">
+                <div class="catalog-text-box">
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                 </div>
             </div>
         </section>
