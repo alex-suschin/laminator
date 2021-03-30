@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Ламинатор', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+<body>
+    <div class="wrapper wrapper-vn">
+        @@include('components/page/_2_header-vn.html')
+
+
+        <section class="cart-wrapper">
+            <div class="container">
+                <h1>Оформление заказа</h1>
+                <div class="cart-box">
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <div>
+                                <div class="cart-img"><img src="img/cart-laminat.jpg" alt="cart-laminat"></div>
+                                <a href="#" class="cart-title">Ламинат Ideal Look Id 04 Дуб Стайл</a>
+                            </div>
+                            <div>
+                                <div class="price-box">
+                                    <div class="old-price">350 ₽ м<sup>2</sup></div>
+                                    <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                </div>
+                                <div class="col-goods">
+                                    <div class="number">
+
+                                        <input class="quantity-num" type="number" min="1" value="1" readonly="">
+                                        <div class="quantity-nav">
+                                            <div class="quantity-button number-plus">+</div>
+                                            <div class="quantity-button number-minus">-</div>
+                                        </div>
+
+                                    </div>
+                                    <span>Упаковок</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="cart-total-price"><strong>Итого:</strong> <i>7.98</i><small>/м<sup>2</sup> за </small><b>150</b> ₽</div>
+                            </div>
+                            <button class="del-cart"></button>
+                        </div>
+
+                        <div class="cart-item">
+                            <div>
+                                <div class="cart-img"><img src="img/cart-laminat.jpg" alt="cart-laminat"></div>
+                                <a href="#" class="cart-title">Ламинат Ideal Look Id 04 Дуб Стайл</a>
+                            </div>
+                            <div>
+                                <div class="price-box">
+                                    <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                </div>
+                                <div class="col-goods">
+                                    <div class="number">
+
+                                        <input class="quantity-num" type="number" min="1" value="1" readonly="">
+                                        <div class="quantity-nav">
+                                            <div class="quantity-button number-plus">+</div>
+                                            <div class="quantity-button number-minus">-</div>
+                                        </div>
+
+                                    </div>
+                                    <span>Упаковок</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="cart-total-price"><strong>Итого:</strong> <i>7.98</i><small>/м<sup>2</sup> за </small><b>150</b> ₽</div>
+                            </div>
+                            <button class="del-cart"></button>
+                        </div>
+                    </div>
+
+                    <form action="/" class="form-cart" method="POST">
+                        <div class="data-client">
+                            <span>Ваши данные</span>
+                            <div class="data-client-inputs">
+                                <input type="text" required placeholder="Имя">
+                                <input type="tel" required placeholder="Телефон">
+                                <input type="e-mail" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="data-cart">
+                            <div class="data-cart__left">
+                                <span>Способ получения</span>
+                                <div class="cart-delivery">
+                                    <label><input name="deliv" type="radio" value="Самовывоз со склада"> <span>Самовывоз со склада</span></label>
+                                    <label><input name="deliv" type="radio" value="Доставка курьером"> <span>Доставка курьером</span></label>
+                                </div>
+                                <div class="city-delivery">
+                                    <select name="city-deliv" id="city-deliv">
+                                        <option disabled selected value="Выберите город">Выберите город</option>
+                                        <option value="Воронеж">Воронеж</option>
+                                        <option value="Фролово">Фролово</option>
+                                        <option value="Ливны">Ливны</option>
+                                    </select>
+                                    <input type="text" placeholder="Введите адрес...">
+                                </div>
+                                <span>Способ оплаты</span>
+                                <div class="cart-pay">
+                                    <label><input name="pay" type="radio" value="Оплата онлайн"> <span>Оплата онлайн</span></label>
+                                    <label><input name="pay" type="radio" value="Оплата курьеру"> <span>Оплата курьеру</span></label>
+                                </div>
+                            </div>
+                            <div class="data-cart__right">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>
