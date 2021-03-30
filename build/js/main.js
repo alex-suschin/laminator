@@ -207,7 +207,18 @@ $(function() {
         ]
     });
 
-
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 5000,
+        from: 250,
+        to: 1800,
+        grid: false,
+        onChange: function(data) {
+            $('.start-price').val(data.from);
+            $('.finish-price').val(data.to_pretty);
+        }
+    });
 
 
 });
