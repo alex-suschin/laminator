@@ -49,17 +49,17 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Regular.eot");
-  src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Gilroy-SemiBold.eot");
+  src: url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-SemiBold.eot");
-  src: url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Gilroy-Regular.eot");
+  src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
@@ -1901,6 +1901,9 @@ footer {
   display: none; }
 
 @media screen and (min-width: 992px) {
+  .card-tags a:hover {
+    background: #AA0B0B;
+    color: #fff; }
   .card-slider-thumbs .slick-prev:hover,
   .card-slider-thumbs .slick-next:hover {
     opacity: .8; }
@@ -2777,9 +2780,6 @@ header .city-box {
     margin-bottom: 10px; }
     .card-tags a:last-child {
       margin-right: 0; }
-    .card-tags a:hover {
-      background: #AA0B0B;
-      color: #fff; }
 
 .card-form {
   display: -webkit-box;
@@ -3251,6 +3251,32 @@ header .city-box {
 .brand {
   max-width: 125px; }
 
+.cards-slider .slick-dots li button:before {
+  font-size: 0;
+  display: block;
+  width: 11px;
+  height: 11px;
+  background: #000;
+  opacity: .25;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%; }
+
+.cards-slider .slick-dots li {
+  margin: 0 6px;
+  width: 11px;
+  height: 11px; }
+
+.cards-slider .slick-dots li button:hover::before {
+  background: #D85245;
+  opacity: 1; }
+
+.cards-slider .slick-dots li.slick-active button:before {
+  background: #D85245;
+  opacity: 1; }
+
 /* 
 M O B I L E
 */
@@ -3549,6 +3575,13 @@ M O B I L E
     font-size: 18px; } }
 
 @media screen and (max-width: 991px) {
+  .card-order button:hover {
+    background: #AA0B0B; }
+  .card-order button:active {
+    background: #000; }
+  .card-tags a:active {
+    background: #AA0B0B;
+    color: #fff; }
   .card-slider-thumbs .slick-prev:active,
   .card-slider-thumbs .slick-next:active {
     opacity: .8; }
@@ -3565,9 +3598,13 @@ M O B I L E
     opacity: .7; }
   .cards-slider .slick-dots li button:hover:before,
   .cards-slider .slick-dots li button:focus:before {
+    opacity: 1; }
+  .cards-slider .slick-dots li button:hover:before,
+  .cards-slider .slick-dots li button:focus:before {
+    background: #000;
     opacity: .25; }
   .cards-slider .slick-dots li.slick-active button:before {
-    color: #D85245;
+    background: #D85245;
     opacity: 1; }
   .catalog-content-hide {
     display: none; }
@@ -4014,6 +4051,8 @@ M O B I L E
     padding: 70px 0 166px 0; } }
 
 @media screen and (max-width: 705px) {
+  .card-slider-thumbs .slick-prev {
+    left: -2px; }
   .card-ex__item {
     width: 58%;
     font-size: 14px;
@@ -4146,6 +4185,8 @@ M O B I L E
     padding-bottom: 6.901%; }
   .card-slider-thumbs .slick-next {
     right: -3px; }
+  .card-slider-thumbs .slick-next::before {
+    top: 0; }
   .card-slider-thumbs .slick-next:active::before {
     right: -6px; }
   .card-slider-thumbs .slick-prev:active::before {
