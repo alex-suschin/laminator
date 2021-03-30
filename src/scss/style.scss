@@ -1791,6 +1791,14 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
+    .card-tags {
+        a {
+            &:hover {
+                background: #AA0B0B;
+                color: #fff;
+            }
+        }
+    }
     .card-slider-thumbs {
         .slick-prev:hover,
         .slick-next:hover {
@@ -2688,10 +2696,6 @@ header .city-box {
         &:last-child {
             margin-right: 0;
         }
-        &:hover {
-            background: #AA0B0B;
-            color: #fff;
-        }
     }
 }
 
@@ -3544,6 +3548,33 @@ M O B I L E
 @media screen and (max-width: 1024px) {}
 
 @media screen and (max-width: 991px) {
+    .card-order button:hover {
+        background: #AA0B0B;
+    }
+    .card-order button:active {
+        background: #000;
+    }
+    .card-tags {
+        a {
+            &:active {
+                background: #AA0B0B;
+                color: #fff;
+            }
+        }
+    }
+    .cards-slider .slick-dots li button:before {
+        font-size: 0;
+        display: block;
+        width: 11px;
+        height: 11px;
+        background: #000;
+        opacity: .25;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
     .card-slider-thumbs {
         .slick-prev:active,
         .slick-next:active {
@@ -3571,8 +3602,13 @@ M O B I L E
     .cards-slider .slick-dots li button:focus:before {
         opacity: .25;
     }
+    .cards-slider .slick-dots li {
+        margin: 0 6px;
+        width: 11px;
+        height: 11px;
+    }
     .cards-slider .slick-dots li.slick-active button:before {
-        color: #D85245;
+        background: #D85245;
         opacity: 1;
     }
     .catalog-content-hide {
@@ -4093,6 +4129,9 @@ M O B I L E
 }
 
 @media screen and (max-width: 705px) {
+    .card-slider-thumbs .slick-prev {
+        left: -2px;
+    }
     .card-ex__item {
         width: 58%;
         font-size: 14px;
@@ -4243,6 +4282,9 @@ M O B I L E
     }
     .card-slider-thumbs .slick-next {
         right: -3px;
+    }
+    .card-slider-thumbs .slick-next::before {
+        top: 0;
     }
     .card-slider-thumbs .slick-next:active::before {
         right: -6px;
