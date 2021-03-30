@@ -2164,6 +2164,11 @@ footer {
         border: none;
         box-shadow: none;
         margin-bottom: 0;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
     }
     button {
         display: block;
@@ -3257,7 +3262,32 @@ header .city-box {
 }
 
 .btn-filter-mob {
+    background: #474442;
+    margin: 0 -15px;
+    padding: 19px 16px 13px 16px;
     display: none;
+    justify-content: space-between;
+    align-items: center;
+    span {
+        display: block;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}
+
+.btn-filter-open {
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url(../img/filter-ico.svg) no-repeat center;
+    @include transition;
+}
+
+.btn-filter-open.active {
+    background: url(../img/close-white.svg) no-repeat center;
 }
 
 .catalog-box__left {
@@ -3305,6 +3335,7 @@ header .city-box {
         padding: 0 8px;
         margin-bottom: 0;
         font-size: 14px;
+        line-height: 170%;
         font-weight: 500;
     }
     i {
@@ -4371,6 +4402,9 @@ M O B I L E
     .catalog-elem {
         width: 14.9%;
     }
+    .catalog-box .catalog-elem {
+        width: 100%;
+    }
     .about-elem-hide {
         column-gap: 10px;
         margin-left: 0;
@@ -4423,6 +4457,21 @@ M O B I L E
     .rewiews-slider__item {
         max-width: 547px;
     }
+    .catalog-box .catalog-elem:nth-child(4n) {
+        margin-right: 26.7px;
+    }
+    .catalog-box .catalog-elem:nth-child(3n) {
+        margin-right: 0;
+    }
+    .catalog-box__left {
+        width: 33.5%;
+    }
+    .catalog-box__right {
+        width: 66.5%;
+    }
+    .filter-price::after {
+        left: 29.9%;
+    }
 }
 
 @media screen and (max-width: 1400px) {
@@ -4452,6 +4501,13 @@ M O B I L E
     }
     .catalog-elem:nth-child(5n) {
         margin-right: 0;
+    }
+    .catalog-box .catalog-elem {
+        max-width: 240px;
+        width: 100%;
+    }
+    .catalog-elem:nth-child(5n) {
+        margin-right: 26.7px;
     }
 }
 
@@ -4650,6 +4706,24 @@ M O B I L E
     // .catalog-elem:nth-child(3n) {
     //     margin-right: 0;
     // }
+    .catalog-box__left {
+        width: 28%;
+    }
+    .catalog-box__right {
+        width: 68%;
+    }
+    .catalog-box .catalog-elem {
+        margin-right: 20px;
+    }
+    .catalog-box .catalog-elem:nth-child(4n) {
+        margin-right: 20px;
+    }
+    .catalog-box .catalog-elem:nth-child(3n) {
+        margin-right: 0;
+    }
+    .filter-price::after {
+        left: 117px;
+    }
 }
 
 @media screen and (max-width: 1150px) {
@@ -4682,6 +4756,33 @@ M O B I L E
         width: 100%;
         margin-bottom: 25px;
     }
+    .catalog-box .container {
+        flex-direction: column;
+    }
+    .catalog-box__left {
+        width: 100%;
+    }
+    .catalog-box__right {
+        width: 100%;
+    }
+    .price-range {
+        max-width: 100%;
+    }
+    .filter-item {
+        max-width: 100%;
+    }
+    .filter-price::after {
+        left: 117px;
+    }
+    .catalog-box .catalog-elem:nth-child(3n) {
+        margin-right: 20px;
+    }
+    .catalog-box .catalog-elem:nth-child(4n) {
+        margin-right: 0;
+    }
+    .catalog-box .catalog-elem {
+        width: 23.1%;
+    }
 }
 
 @media screen and (max-width: 1090px) {
@@ -4694,9 +4795,41 @@ M O B I L E
     }
 }
 
-@media screen and (max-width: 1024px) {}
-
 @media screen and (max-width: 991px) {
+    .catalog-elem-form .btn-in-cart:hover {
+        background: #AA0B0B;
+    }
+    .catalog-elem-form .btn-in-cart:active {
+        background: #000;
+    }
+    .filters button:active {
+        background: #000;
+    }
+    .filters {
+        display: none;
+    }
+    .btn-filter-mob {
+        display: flex;
+        margin-bottom: 35px;
+    }
+    .catalog-box .catalog-elem:nth-child(3n) {
+        margin: 0 10px;
+        margin-bottom: 30px;
+        max-width: initial;
+        width: 30.35%;
+    }
+    .catalog-box .catalog-elem:nth-child(4n) {
+        margin: 0 10px;
+        margin-bottom: 30px;
+        max-width: initial;
+        width: 30.35%;
+    }
+    .catalog-box .catalog-elem {
+        margin: 0 10px;
+        margin-bottom: 30px;
+        max-width: initial;
+        width: 30.35%;
+    }
     .card-order button:hover {
         background: #AA0B0B;
     }
@@ -5605,6 +5738,49 @@ M O B I L E
         border-top: 1px solid rgba(255, 255, 255, 0.4);
         padding-top: 8px;
     }
+    .catalog-box .catalog-elems *.catalog-elem {
+        margin: 0 15px 16px 0;
+        width: 47.8%;
+    }
+    .catalog-box .catalog-elems *.catalog-elem:nth-child(2n) {
+        margin: 0 0 16px 0;
+    }
+    .wrapper-vn .partners-slider__item img {
+        max-height: 70%;
+    }
+    .wrapper-vn .partners-slider {
+        margin-bottom: 10px;
+        padding: 11px 60px 12px 60px;
+    }
+    .wrapper-vn .partners-slider .slick-dots {
+        display: none!important;
+    }
+    .wrapper-vn .partners {
+        margin-bottom: 0;
+    }
+    .wrapper-vn .partners-slider .slick-prev,
+    .wrapper-vn .partners-slider .slick-next {
+        top: 49%;
+    }
+    .catalog-wrap h1 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        color: #474442;
+    }
+    .wrapper-vn .partners-slider__item {
+        margin: 0 14px;
+        max-width: 42px;
+    }
+    .btn-filter-mob {
+        margin-bottom: 0;
+    }
+    .sort {
+        margin-top: 0;
+    }
+    .catalog-wrap {
+        padding: 10px 0 0 0;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -5763,6 +5939,26 @@ M O B I L E
         width: 113px;
         height: 114px;
     }
+    .sort .nice-select {
+        max-width: 180px;
+    }
+    .sort span {
+        font-size: 16px;
+    }
+    .catalog-text-box {
+        column-count: 1;
+    }
+    .catalog-box {
+        margin-bottom: 29px;
+    }
+    .filter-item-hide {
+        border: 1px solid #DBE2EA;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04), 0px 20px 20px rgba(44, 39, 56, 0.04);
+    }
+    .checkbox input+i {
+        margin-left: 8px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -5849,6 +6045,9 @@ M O B I L E
 
 @media screen and (max-width: 370px) {
     .recommend .catalog-elems *.catalog-elem {
+        width: 47.4%;
+    }
+    .catalog-box .catalog-elems *.catalog-elem {
         width: 47.4%;
     }
 }
