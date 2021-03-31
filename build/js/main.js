@@ -31,10 +31,10 @@ $(function() {
         });
     });
 
-    $("a.btn-catalog-anchor").click(function() {
+    $("a.btn-catalog-anchor, .raiting a").click(function() {
         elementClick = $(this).attr("href")
         destination = $(elementClick).offset().top;
-        $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
+        $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination - 120 }, 700);
         return false;
     });
 
@@ -332,16 +332,19 @@ $(window).on('load resize', function() {
                 'border-radius': '50%',
                 'z-index': '9999999999',
                 'left': e.pageX - 25,
-                'top': e.pageY - 25,
+                'top': e.pageY - 175,
             });
             var cart = $('.cart').offset();
             console.log(cart);
-            $('.animtocart').animate({ top: cart.top + 'px', left: cart.left + 20 + 'px', width: 0, height: 0 }, 800, function() {
+            $('.animtocart').animate({ top: cart.top - 200 + 'px', left: cart.left + 20 + 'px', width: 0, height: 0 }, 800, function() {
                 $(this).remove();
             });
         });
     }
 
+    if (width < '1025') {
+        $.fancybox.destroy();
+    }
     if (width > '1280') {
         $('.about-elem').hover(function() {
             $(this).toggleClass('active');

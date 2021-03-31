@@ -9,14 +9,6 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-ExtraBold.eot");
-  src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Gilroy";
   src: url("../fonts/Gilroy-Bold.eot");
   src: url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
   font-weight: 700;
@@ -33,17 +25,25 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Medium.eot");
-  src: url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Gilroy-Light.eot");
+  src: url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Light.eot");
-  src: url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Gilroy-ExtraBold.eot");
+  src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.eot");
+  src: url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
   font-display: swap; }
 
@@ -1896,6 +1896,8 @@ footer {
   display: none; }
 
 @media screen and (min-width: 992px) {
+  .breadcrumbs a:hover {
+    text-decoration: underline; }
   .btn-order:hover {
     background: #000; }
   .filters button:hover {
@@ -2514,10 +2516,11 @@ header .city-box {
           align-items: flex-end;
   margin-bottom: 27px; }
   .card-box-top h1 {
+    width: 41%;
+    text-align: left;
     font-weight: normal;
     font-size: 30px;
     line-height: 24px;
-    text-align: center;
     color: #474442;
     margin-top: 0;
     margin-bottom: 0; }
@@ -2541,7 +2544,15 @@ header .city-box {
   margin-bottom: 71px; }
 
 .card-content__left {
+  position: relative;
   width: 47.072%; }
+  .card-content__left .catalog-elem-fav {
+    right: 8px;
+    top: -51px;
+    width: 31px;
+    height: 27px; }
+    .card-content__left .catalog-elem-fav::after, .card-content__left .catalog-elem-fav::before {
+      background-size: cover; }
 
 .card-content__right {
   width: 50%; }
@@ -4758,6 +4769,21 @@ Ion.RangeSlider
       -ms-flex-align: center;
           align-items: center; }
 
+.wrapper-vn header {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999; }
+
+.vn {
+  padding-top: 148px; }
+
+.animtocart {
+  z-index: 99999 !important; }
+
 /* 
 M O B I L E
 */
@@ -4976,6 +5002,12 @@ M O B I L E
     overflow-x: hidden; }
   a:focus {
     outline: none; }
+  .card-content__left .catalog-elem-fav {
+    right: 250px;
+    top: 15px;
+    z-index: 5; }
+  .vn {
+    padding-top: 95.5px; }
   .slick-dotted.rewiews-slider {
     margin-bottom: 80px; }
   .rewiews-slider .slick-prev,
@@ -5143,7 +5175,13 @@ M O B I L E
   .catalog-item-hide-title {
     font-size: 18px; } }
 
+@media screen and (max-width: 1024px) {
+  .card-slider-big-item a {
+    pointer-events: none; } }
+
 @media screen and (max-width: 991px) {
+  .vn {
+    padding-top: 67px; }
   .partners-slider .slick-dots li button:hover:before,
   .partners-slider .slick-dots li button:focus:before {
     opacity: .25; }
@@ -5560,18 +5598,10 @@ M O B I L E
     margin-bottom: 10px; } }
 
 @media screen and (max-width: 835px) {
-  .card-ex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
   .card-ex__item {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 12px; }
+    width: 32%;
+    margin-right: 10px;
+    margin-bottom: 0; }
     .card-ex__item:last-child {
       margin-bottom: 0; }
   .cards-slider .catalog-elem {
@@ -5592,6 +5622,8 @@ M O B I L E
     -o-transform: translateY(0); } }
 
 @media screen and (max-width: 768px) {
+  .card-content__left .catalog-elem-fav {
+    right: 180px; }
   .top-wrap .title {
     font-size: 38px; }
   .btn-catalog-anchor {
@@ -5642,6 +5674,19 @@ M O B I L E
     right: -12%; } }
 
 @media screen and (max-width: 760px) {
+  .card-ex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .card-ex__item {
+    width: 55%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px; }
   .btn-catalog-anchor {
     display: none; }
   .about-elem .title {
@@ -5712,12 +5757,12 @@ M O B I L E
     padding: 70px 0 166px 0; } }
 
 @media screen and (max-width: 705px) {
+  .card-content__left .catalog-elem-fav {
+    right: 15px;
+    width: 24px;
+    height: 22px; }
   .card-slider-thumbs .slick-prev {
     left: -2px; }
-  .card-ex__item {
-    width: 58%;
-    font-size: 14px;
-    line-height: 17px; }
   .card-sert {
     margin-bottom: 25px; }
   .card-sert img {
@@ -5836,10 +5881,6 @@ M O B I L E
     font-weight: 500;
     font-size: 15px;
     line-height: 32px; }
-  .payed-items img {
-    display: none; }
-    .payed-items img:first-child, .payed-items img:nth-child(2), .payed-items img:nth-child(3) {
-      display: block; }
   .card-slider-thumbs-item {
     width: 25%;
     margin: 0 3.5px;
@@ -6307,6 +6348,8 @@ M O B I L E
     width: 47.4%; } }
 
 @media screen and (max-width: 360px) {
+  .card-ex__item {
+    width: 60%; }
   .cart-delivery span,
   .cart-pay span {
     font-size: 11px; }
