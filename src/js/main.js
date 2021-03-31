@@ -14,6 +14,23 @@ $(function() {
         }
     });
 
+    $(window).on('load', function() {
+        let phones = [
+            { 'mask': '+7 \\ \\ ###-###-##-##' }
+        ];
+
+        $('input[type=tel]').inputmask({
+            mask: phones,
+            greedy: false,
+            definitions: {
+                '#': {
+                    validator: '[0-9]',
+                    cardinality: 1
+                }
+            }
+        });
+    });
+
     $("a.btn-catalog-anchor").click(function() {
         elementClick = $(this).attr("href")
         destination = $(elementClick).offset().top;
@@ -112,6 +129,21 @@ $(function() {
             var metrSummCard = $(this).val() * varMetrCard;
             var metrToPointCard = metrSummCard.toFixed(2);
             totalMetrCard.text(metrToPointCard);
+        });
+    });
+
+
+    $('.cart-item').each(function() {
+        var varMetrCart = $(this).find('.cart-total-price i').text();
+        var priceCart = $(this).find('.price i').text();
+        var valColCart = $(this).find('.quantity-num');
+        var totalPriceCart = $(this).find('.cart-total-price b');
+        var totalMetrCart = $(this).find('.cart-total-price i');
+        valColCart.on('change', function() {
+            totalPriceCart.text($(this).val() * priceCart);
+            var metrSummCart = $(this).val() * varMetrCart;
+            var metrToPointCart = metrSummCart.toFixed(2);
+            totalMetrCart.text(metrToPointCart);
         });
     });
 
