@@ -1512,6 +1512,10 @@ sup {
 
 .partners-slider {
     padding: 12.5px 0 12.5px 0;
+    .slick-prev,
+    .slick-next {
+        z-index: 2;
+    }
 }
 
 .partners-slider__item {
@@ -5194,6 +5198,13 @@ M O B I L E
 }
 
 @media screen and (max-width: 991px) {
+    .partners-slider .slick-dots li button:hover:before,
+    .partners-slider .slick-dots li button:focus:before {
+        opacity: .25;
+    }
+    .partners-slider .slick-dots li.slick-active button:before {
+        opacity: 1;
+    }
     .catalog-elem-form .btn-in-cart:hover {
         background: #AA0B0B;
     }
