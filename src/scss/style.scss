@@ -6250,6 +6250,9 @@ M O B I L E
     }
     .partners-slider {
         margin: 0 -15px;
+        .slick-dots {
+            left: 0;
+        }
     }
     .catalog-elem-title {
         width: 95%;
@@ -6321,7 +6324,8 @@ M O B I L E
     .wrapper-vn .partners-slider__item img {
         max-height: 70%;
     }
-    .wrapper-vn .partners-slider {
+    .wrapper-vn .partners-slider,
+    .partners-slider {
         margin-bottom: 10px;
         padding: 11px 60px 12px 60px;
     }
@@ -6640,6 +6644,10 @@ M O B I L E
 }
 
 @media screen and (max-width: 475px) {
+    .autocomplete-suggestions {
+        min-width: initial;
+        width: 100%;
+    }
     .card-sert img {
         right: -21.5%;
     }

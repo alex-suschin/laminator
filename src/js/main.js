@@ -289,7 +289,7 @@ $(function() {
         $('.filters').slideToggle();
     });
 
-    $('.search-vn input, .search-mobile input').autocomplete({
+    $('.serach-form input, .search-vn input, .search-mobile input').autocomplete({
         minChars: 2,
         maxHeight: 410,
         lookupLimit: 13,
