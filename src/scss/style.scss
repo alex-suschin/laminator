@@ -1795,6 +1795,9 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
+    .breadcrumbs a:hover {
+        text-decoration: underline;
+    }
     .btn-order:hover {
         background: #000;
     }
@@ -2461,10 +2464,11 @@ header .city-box {
     align-items: flex-end;
     margin-bottom: 27px;
     h1 {
+        width: 41%;
+        text-align: left;
         font-weight: normal;
         font-size: 30px;
         line-height: 24px;
-        text-align: center;
         color: #474442;
         margin-top: 0;
         margin-bottom: 0;
@@ -2486,7 +2490,18 @@ header .city-box {
 }
 
 .card-content__left {
+    position: relative;
     width: 47.072%;
+    .catalog-elem-fav {
+        right: 8px;
+        top: -51px;
+        width: 31px;
+        height: 27px;
+        &::after,
+        &::before {
+            background-size: cover;
+        }
+    }
 }
 
 .card-content__right {
@@ -4727,6 +4742,68 @@ Ion.RangeSlider
     align-items: center;
 }
 
+.wrapper-vn header {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.vn {
+    padding-top: 148px;
+}
+
+.animtocart {
+    z-index: 99999 !important;
+}
+
+.autocomplete-suggestions {
+    background: #fff;
+    min-width: 355px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #756F86;
+    box-sizing: border-box;
+    line-height: 100%;
+    color: #424552;
+}
+
+.autocomplete-suggestion {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 40px;
+    color: #756F86;
+    padding: 0 26px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include transition;
+    strong {
+        color: #AA0B0B;
+        font-weight: normal;
+    }
+}
+
+.autocomplete-suggestion:last-child {
+    margin-bottom: 0;
+}
+
+.autocomplete-suggestion:hover {
+    background: #AA0B0B;
+    color: #fff;
+}
+
+.autocomplete-suggestion:hover strong {
+    color: #fff;
+    font-weight: 500;
+}
+
 
 /* 
 M O B I L E
@@ -4756,9 +4833,12 @@ M O B I L E
     .partners-slider .slick-prev {
         left: 20px;
     }
-    .partners-slider .slick-prev,
-    .partners-slider .slick-next {
-        top: 120%;
+    // .partners-slider .slick-prev,
+    // .partners-slider .slick-next {
+    //     top: 120%;
+    // }
+    .partners-slider {
+        padding: 12.5px 125px;
     }
     .about-elem.active {
         max-width: 400px;
@@ -4984,6 +5064,14 @@ M O B I L E
     a:focus {
         outline: none;
     }
+    .card-content__left .catalog-elem-fav {
+        right: 250px;
+        top: 15px;
+        z-index: 5;
+    }
+    .vn {
+        padding-top: 95.5px;
+    }
     .slick-dotted.rewiews-slider {
         margin-bottom: 80px;
     }
@@ -5197,7 +5285,16 @@ M O B I L E
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .card-slider-big-item a {
+        pointer-events: none;
+    }
+}
+
 @media screen and (max-width: 991px) {
+    .vn {
+        padding-top: 67px;
+    }
     .partners-slider .slick-dots li button:hover:before,
     .partners-slider .slick-dots li button:focus:before {
         opacity: .25;
@@ -5690,14 +5787,10 @@ M O B I L E
 }
 
 @media screen and (max-width: 835px) {
-    .card-ex {
-        flex-direction: column;
-        align-items: flex-start;
-    }
     .card-ex__item {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 12px;
+        width: 32%;
+        margin-right: 10px;
+        margin-bottom: 0;
         &:last-child {
             margin-bottom: 0;
         }
@@ -5725,6 +5818,9 @@ M O B I L E
 }
 
 @media screen and (max-width: 768px) {
+    .card-content__left .catalog-elem-fav {
+        right: 180px;
+    }
     .top-wrap .title {
         font-size: 38px;
     }
@@ -5790,6 +5886,16 @@ M O B I L E
 }
 
 @media screen and (max-width: 760px) {
+    .card-ex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-ex__item {
+        width: 55%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
     .btn-catalog-anchor {
         display: none;
     }
@@ -5873,13 +5979,13 @@ M O B I L E
 }
 
 @media screen and (max-width: 705px) {
+    .card-content__left .catalog-elem-fav {
+        right: 15px;
+        width: 24px;
+        height: 22px;
+    }
     .card-slider-thumbs .slick-prev {
         left: -2px;
-    }
-    .card-ex__item {
-        width: 58%;
-        font-size: 14px;
-        line-height: 17px;
     }
     .card-sert {
         margin-bottom: 25px;
@@ -6010,14 +6116,6 @@ M O B I L E
         font-weight: 500;
         font-size: 15px;
         line-height: 32px;
-    }
-    .payed-items img {
-        display: none;
-        &:first-child,
-        &:nth-child(2),
-        &:nth-child(3) {
-            display: block;
-        }
     }
     .card-slider-thumbs-item {
         width: 25%;
@@ -6248,7 +6346,7 @@ M O B I L E
         max-width: 42px;
     }
     .btn-filter-mob {
-        margin-bottom: 0;
+        margin-bottom: 25px;
     }
     .sort {
         margin-top: 0;
@@ -6553,6 +6651,13 @@ M O B I L E
     }
 }
 
+@media screen and (max-width: 385px) {
+    .autocomplete-suggestions {
+        min-width: initial;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .top-wrap {
         padding: 72px 0 117px 0;
@@ -6602,6 +6707,9 @@ M O B I L E
 }
 
 @media screen and (max-width: 360px) {
+    .card-ex__item {
+        width: 60%;
+    }
     .cart-delivery span,
     .cart-pay span {
         font-size: 11px;

@@ -31,10 +31,10 @@ $(function() {
         });
     });
 
-    $("a.btn-catalog-anchor").click(function() {
+    $("a.btn-catalog-anchor, .raiting a").click(function() {
         elementClick = $(this).attr("href")
         destination = $(elementClick).offset().top;
-        $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
+        $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination - 120 }, 700);
         return false;
     });
 
@@ -252,6 +252,22 @@ $(function() {
         }
     });
 
+
+    $('.range-slider-input').keyup(function() {
+        let inputId = $(this).attr('id');
+        let inputValue = $(this).val();
+        let my_range = $(".js-range-slider").data("ionRangeSlider");
+        if (inputId === 'slider-input-from') {
+            my_range.update({
+                from: inputValue
+            });
+        } else {
+            my_range.update({
+                to: inputValue
+            });
+        }
+    });
+
     $('.js-show-filter').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
@@ -271,6 +287,13 @@ $(function() {
         e.preventDefault();
         $(this).toggleClass('active');
         $('.filters').slideToggle();
+    });
+
+    $('.search-vn input, .search-mobile input').autocomplete({
+        minChars: 2,
+        maxHeight: 410,
+        lookupLimit: 13,
+        lookup: productsbase
     });
 
 });
@@ -332,14 +355,22 @@ $(window).on('load resize', function() {
                 'border-radius': '50%',
                 'z-index': '9999999999',
                 'left': e.pageX - 25,
-                'top': e.pageY - 25,
+                'top': e.pageY - 175,
             });
             var cart = $('.cart').offset();
             console.log(cart);
-            $('.animtocart').animate({ top: cart.top + 'px', left: cart.left + 20 + 'px', width: 0, height: 0 }, 800, function() {
+            $('.animtocart').animate({ top: cart.top - 200 + 'px', left: cart.left + 20 + 'px', width: 0, height: 0 }, 800, function() {
                 $(this).remove();
             });
         });
+    }
+
+    if (width > '1024') {
+        $('[data-fancybox]').fancybox();
+    }
+
+    if (width < '1025') {
+        $.fancybox.destroy();
     }
 
     if (width > '1280') {
@@ -358,15 +389,26 @@ $(window).on('load resize', function() {
 
     if (width > '705') {
         $('.card-brand-rait').prependTo($('.card-desc'));
-        $('.btn-filter-mob').prependTo($('.catalog-box__left'));
     }
 
     if (width < '706') {
         $('.card-brand-rait').insertAfter($('.card-id'));
-        $('.btn-filter-mob').prependTo($('.wrapper-vn .partners .container'));
     }
 
     if (width > '991') {
         $('.mobile-menu .menu').appendTo('.header-top .container');
     }
 });
+
+
+var productsbase = [
+    'Ламинат Ideal Look Id 04 Дуб Стайл',
+    'Плитка 587',
+    'Линолеум BS102',
+    'Плитка Deluxe 3',
+    'Ламинат Ultra 5',
+    'Линолеум 734',
+    'Плитка Ideal Id 08',
+    'Ламинат Super',
+    'Линолеум Default'
+];
