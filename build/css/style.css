@@ -4864,9 +4864,8 @@ M O B I L E
     right: 20px; }
   .partners-slider .slick-prev {
     left: 20px; }
-  .partners-slider .slick-prev,
-  .partners-slider .slick-next {
-    top: 120%; }
+  .partners-slider {
+    padding: 12.5px 125px; }
   .about-elem.active {
     max-width: 400px; }
   .about__left {
@@ -6106,7 +6105,7 @@ M O B I L E
     margin: 0 14px;
     max-width: 42px; }
   .btn-filter-mob {
-    margin-bottom: 0; }
+    margin-bottom: 25px; }
   .sort {
     margin-top: 0; }
   .catalog-wrap {

@@ -252,6 +252,22 @@ $(function() {
         }
     });
 
+
+    $('.range-slider-input').keyup(function() {
+        let inputId = $(this).attr('id');
+        let inputValue = $(this).val();
+        let my_range = $(".js-range-slider").data("ionRangeSlider");
+        if (inputId === 'slider-input-from') {
+            my_range.update({
+                from: inputValue
+            });
+        } else {
+            my_range.update({
+                to: inputValue
+            });
+        }
+    });
+
     $('.js-show-filter').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
@@ -373,12 +389,10 @@ $(window).on('load resize', function() {
 
     if (width > '705') {
         $('.card-brand-rait').prependTo($('.card-desc'));
-        $('.btn-filter-mob').prependTo($('.catalog-box__left'));
     }
 
     if (width < '706') {
         $('.card-brand-rait').insertAfter($('.card-id'));
-        $('.btn-filter-mob').prependTo($('.wrapper-vn .partners .container'));
     }
 
     if (width > '991') {
