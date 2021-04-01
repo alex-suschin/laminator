@@ -4760,6 +4760,50 @@ Ion.RangeSlider
     z-index: 99999 !important;
 }
 
+.autocomplete-suggestions {
+    background: #fff;
+    min-width: 355px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #756F86;
+    box-sizing: border-box;
+    line-height: 100%;
+    color: #424552;
+}
+
+.autocomplete-suggestion {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 40px;
+    color: #756F86;
+    padding: 0 26px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include transition;
+    strong {
+        color: #AA0B0B;
+        font-weight: normal;
+    }
+}
+
+.autocomplete-suggestion:last-child {
+    margin-bottom: 0;
+}
+
+.autocomplete-suggestion:hover {
+    background: #AA0B0B;
+    color: #fff;
+}
+
+.autocomplete-suggestion:hover strong {
+    color: #fff;
+    font-weight: 500;
+}
+
 
 /* 
 M O B I L E
@@ -6601,6 +6645,13 @@ M O B I L E
     }
     .card-sert {
         padding: 20px 0 73px 0;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .autocomplete-suggestions {
+        min-width: initial;
+        width: 100%;
     }
 }
 

@@ -1,14 +1,6 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Black.eot");
-  src: url("../fonts/Gilroy-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Gilroy";
   src: url("../fonts/Gilroy-Bold.eot");
   src: url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
   font-weight: 700;
@@ -17,8 +9,16 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Heavy.eot");
-  src: url("../fonts/Gilroy-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
+  src: url("../fonts/Gilroy-Black.eot");
+  src: url("../fonts/Gilroy-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-ExtraBold.eot");
+  src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap; }
@@ -28,14 +28,6 @@
   src: url("../fonts/Gilroy-Light.eot");
   src: url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
   font-weight: 300;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("../fonts/Gilroy-ExtraBold.eot");
-  src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
   font-display: swap; }
 
@@ -52,6 +44,14 @@
   src: url("../fonts/Gilroy-Regular.eot");
   src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Heavy.eot");
+  src: url("../fonts/Gilroy-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap; }
 
@@ -4784,6 +4784,50 @@ Ion.RangeSlider
 .animtocart {
   z-index: 99999 !important; }
 
+.autocomplete-suggestions {
+  background: #fff;
+  min-width: 355px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #756F86;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 100%;
+  color: #424552; }
+
+.autocomplete-suggestion {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 40px;
+  color: #756F86;
+  padding: 0 26px;
+  cursor: pointer;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear; }
+  .autocomplete-suggestion strong {
+    color: #AA0B0B;
+    font-weight: normal; }
+
+.autocomplete-suggestion:last-child {
+  margin-bottom: 0; }
+
+.autocomplete-suggestion:hover {
+  background: #AA0B0B;
+  color: #fff; }
+
+.autocomplete-suggestion:hover strong {
+  color: #fff;
+  font-weight: 500; }
+
 /* 
 M O B I L E
 */
@@ -6305,6 +6349,11 @@ M O B I L E
     margin-bottom: 15px; }
   .card-sert {
     padding: 20px 0 73px 0; } }
+
+@media screen and (max-width: 385px) {
+  .autocomplete-suggestions {
+    min-width: initial;
+    width: 100%; } }
 
 @media screen and (max-width: 375px) {
   .top-wrap {

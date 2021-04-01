@@ -273,6 +273,13 @@ $(function() {
         $('.filters').slideToggle();
     });
 
+    $('.search-vn input, .search-mobile input').autocomplete({
+        minChars: 2,
+        maxHeight: 410,
+        lookupLimit: 13,
+        lookup: productsbase
+    });
+
 });
 
 $('.js-address').click(function(e) {
@@ -342,9 +349,14 @@ $(window).on('load resize', function() {
         });
     }
 
+    if (width > '1024') {
+        $('[data-fancybox]').fancybox();
+    }
+
     if (width < '1025') {
         $.fancybox.destroy();
     }
+
     if (width > '1280') {
         $('.about-elem').hover(function() {
             $(this).toggleClass('active');
@@ -373,3 +385,16 @@ $(window).on('load resize', function() {
         $('.mobile-menu .menu').appendTo('.header-top .container');
     }
 });
+
+
+var productsbase = [
+    'Ламинат Ideal Look Id 04 Дуб Стайл',
+    'Плитка 587',
+    'Линолеум BS102',
+    'Плитка Deluxe 3',
+    'Ламинат Ultra 5',
+    'Линолеум 734',
+    'Плитка Ideal Id 08',
+    'Ламинат Super',
+    'Линолеум Default'
+];
