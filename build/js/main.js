@@ -155,7 +155,8 @@ $(function() {
     });
 
 
-    $('.cart-variant--quantity_input').on("change", function() {
+
+    function calcCart() {
         var st = 0;
         var priceDeliv = $('.cart-summ-deliv span i').text();
         var priceDelivNum = +priceDeliv;
@@ -169,12 +170,18 @@ $(function() {
 
         $('.cart-summ span i').text(st);
         $('.cart-total-summ span i').text(st + priceDelivNum);
+    }
+
+
+    $('.cart-variant--quantity_input').on("change", function() {
+        calcCart();
     });
 
 
 
     $('.del-cart').click(function() {
         $(this).parents('.cart-item').remove();
+        calcCart();
     });
 
 
