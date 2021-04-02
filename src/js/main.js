@@ -137,8 +137,7 @@ $(function() {
 
 
 
-    var CartSummBox = $('.cart-summ span i');
-    var CartSumm = 0;
+
     $('.cart-item').each(function() {
         var varMetrCart = $(this).find('.cart-total-price i').text();
         var priceCart = $(this).find('.price i').text();
@@ -152,15 +151,31 @@ $(function() {
             var metrSummCart = $(this).val() * varMetrCart;
             var metrToPointCart = metrSummCart.toFixed(2);
             totalMetrCart.text(metrToPointCart);
-            CartSumm += totalPriceCartFixed;
-            CartSummy = +CartSumm;
-            console.log(typeof(CartSummy));
-            CartSummBox.text(CartSummy);
         });
     });
 
 
+    $('.cart-variant--quantity_input').on("change", function() {
+        var st = 0;
+        var priceDeliv = $('.cart-summ-deliv span i').text();
+        var priceDelivNum = +priceDeliv;
+        $('.cart-item').each(function() {
+            var i = $('.cart-variant--quantity_input', this);
+            var up = $(i).data('unit-price');
+            var boxMetr = $(i).data('box-metr');
+            var q = $(i).val();
+            st = st + (up * q * boxMetr);
+        });
 
+        $('.cart-summ span i').text(st);
+        $('.cart-total-summ span i').text(st + priceDelivNum);
+    });
+
+
+
+    $('.del-cart').click(function() {
+        $(this).parents('.cart-item').remove();
+    });
 
 
 
@@ -397,6 +412,7 @@ $(window).on('load resize', function() {
         $('header .menu').appendTo($('.mobile-menu'));
         $('#popup-wrap-map').remove();
 
+
     }
 
     if (width > '705') {
@@ -409,6 +425,15 @@ $(window).on('load resize', function() {
 
     if (width > '991') {
         $('.mobile-menu .menu').appendTo('.header-top .container');
+
+        $(`<div class="popup-wrap" id="popup-wrap-map">
+        <div class="popup" id="popup-map">
+            <div class="map">
+                <a href="#" class="close-map"></a>
+                <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3172dc141412139e68cefbe69db9a49b475c996362a6372858f99bbeed8db3f2&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </div>
+    </div>`).insertAfter($('footer'));
     }
 });
 

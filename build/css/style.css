@@ -9,8 +9,24 @@
 
 @font-face {
   font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.eot");
+  src: url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Gilroy";
   src: url("../fonts/Gilroy-ExtraBold.eot");
   src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Heavy.eot");
+  src: url("../fonts/Gilroy-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap; }
@@ -41,25 +57,9 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Heavy.eot");
-  src: url("../fonts/Gilroy-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Gilroy";
   src: url("../fonts/Gilroy-SemiBold.eot");
   src: url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Bold.eot");
-  src: url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
   font-display: swap; }
 
@@ -2493,11 +2493,31 @@ header .city-box {
           align-items: center; }
   .social a {
     display: block;
+    width: 24px;
+    height: 24px;
     margin-right: 24px; }
     .social a:last-child {
       margin-right: 0; }
-  .social a:hover svg {
-    fill: red; }
+
+.vk {
+  background: url(../img/vk.svg) no-repeat center; }
+  .vk:hover {
+    background: url(../img/vk-red.svg) no-repeat center; }
+
+.fb {
+  background: url(../img/fb.svg) no-repeat center; }
+  .fb:hover {
+    background: url(../img/fb-red.svg) no-repeat center; }
+
+.inst {
+  background: url(../img/inst.svg) no-repeat center; }
+  .inst:hover {
+    background: url(../img/inst-red.svg) no-repeat center; }
+
+.ok {
+  background: url(../img/ok.svg) no-repeat center; }
+  .ok:hover {
+    background: url(../img/ok-red.svg) no-repeat center; }
 
 .card-box {
   padding: 0 0 38px 0; }
@@ -5876,7 +5896,7 @@ M O B I L E
     margin: 0 4px;
     margin-bottom: 12px; }
     .social a:last-child {
-      margin: 0 8px 0 0px;
+      margin: 0 3px 0 0px;
       margin-bottom: 12px; }
   .rewiews-slider__item {
     max-width: initial;

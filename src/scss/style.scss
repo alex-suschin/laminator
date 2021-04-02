@@ -2441,13 +2441,40 @@ header .city-box {
     align-items: center;
     a {
         display: block;
+        width: 24px;
+        height: 24px;
         margin-right: 24px;
         &:last-child {
             margin-right: 0;
         }
     }
-    a:hover svg {
-        fill: red;
+}
+
+.vk {
+    background: url(../img/vk.svg) no-repeat center;
+    &:hover {
+        background: url(../img/vk-red.svg) no-repeat center;
+    }
+}
+
+.fb {
+    background: url(../img/fb.svg) no-repeat center;
+    &:hover {
+        background: url(../img/fb-red.svg) no-repeat center;
+    }
+}
+
+.inst {
+    background: url(../img/inst.svg) no-repeat center;
+    &:hover {
+        background: url(../img/inst-red.svg) no-repeat center;
+    }
+}
+
+.ok {
+    background: url(../img/ok.svg) no-repeat center;
+    &:hover {
+        background: url(../img/ok-red.svg) no-repeat center;
     }
 }
 
@@ -6057,7 +6084,7 @@ M O B I L E
         margin: 0 4px;
         margin-bottom: 12px;
         &:last-child {
-            margin: 0 8px 0 0px;
+            margin: 0 3px 0 0px;
             margin-bottom: 12px;
         }
     }
