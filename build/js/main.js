@@ -426,14 +426,6 @@ $(window).on('load resize', function() {
     if (width > '991') {
         $('.mobile-menu .menu').appendTo('.header-top .container');
 
-        $(`<div class="popup-wrap" id="popup-wrap-map">
-        <div class="popup" id="popup-map">
-            <div class="map">
-                <a href="#" class="close-map"></a>
-                <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3172dc141412139e68cefbe69db9a49b475c996362a6372858f99bbeed8db3f2&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
-            </div>
-        </div>
-    </div>`).insertAfter($('footer'));
     }
 });
 
