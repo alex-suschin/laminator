@@ -4,7 +4,7 @@
 @@include('components/page/_1_head.html',{ 'title': 'Ламинатор', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
 
 <body class="vn">
-    <div class="wrapper wrapper-vn">
+    <div class="wrapper wrapper-vn" id="main">
         @@include('components/page/_2_header-vn.html')
 
         <section class="catalog-wrap">
@@ -17,35 +17,35 @@
         <section class="partners">
             <div class="container">
                 <div class="partners-slider">
-                    <a href="#" class="partners-slider__item">
+                    <a href="#" class="partners-slider__item" title="Хорс">
                         <img src="img/partners-1.png" alt="Партнер 1">
                     </a>
-                    <a href="#" class="partners-slider__item">
+                    <a href="#" class="partners-slider__item" title="Бисквитный Двор">
                         <img src="img/partners-2.png" alt="Партнер 2">
                     </a>
-                    <a href="#" class="partners-slider__item">
+                    <a href="#" class="partners-slider__item" title="Русич">
                         <img src="img/partners-3.png" alt="Партнер 3">
                     </a>
-                    <a href="#" class="partners-slider__item">
+                    <a href="#" class="partners-slider__item" title="Медовый край">
                         <img src="img/partners-4.png" alt="Партнер 4">
                     </a>
-                    <a href="#" class="partners-slider__item">
+                    <a href="#" class="partners-slider__item" title="Ягоды плюс">
                         <img src="img/partners-5.png" alt="Партнер 5">
                     </a>
-                    <a href="#" class="partners-slider__item">
+                    <a href="#" class="partners-slider__item" title="Медовый край">
                         <img src="img/partners-6.png" alt="Партнер 6">
                     </a>
-                    <a href="#" class="partners-slider__item">
+                    <a href="#" class="partners-slider__item" title="Ягоды плюс">
                         <img src="img/partners-7.png" alt="Партнер 7">
                     </a>
-                    <a href="#" class="partners-slider__item">
-                        <img src="img/partners-1.png" alt="Партнер 7">
+                    <a href="#" class="partners-slider__item" title="Хорс">
+                        <img src="img/partners-1.png" alt="Партнер 8">
                     </a>
-                    <a href="#" class="partners-slider__item">
-                        <img src="img/partners-2.png" alt="Партнер 7">
+                    <a href="#" class="partners-slider__item" title="Бисквитный Двор">
+                        <img src="img/partners-2.png" alt="Партнер 9">
                     </a>
-                    <a href="#" class="partners-slider__item">
-                        <img src="img/partners-3.png" alt="Партнер 7">
+                    <a href="#" class="partners-slider__item" title="Русич">
+                        <img src="img/partners-3.png" alt="Партнер 10">
                     </a>
                 </div>
             </div>
@@ -197,7 +197,10 @@
                         <div class="catalog-elem">
                             <a href="#">
                                 <div class="catalog-elem-img">
-                                    <img src="img/catalog-img1.jpg" alt="catalog-img1">
+                                    <picture>
+                                        <source srcset="img/catalog-img1.jpg" media="(min-width: 600px)">
+                                        <img src="catalog-img1-mob.jpg" alt="Catalog-img">
+                                    </picture>
                                 </div>
                                 <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
                             </a>
@@ -221,7 +224,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -230,7 +233,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -262,7 +265,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -271,7 +274,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>638</b> ₽</div>
                             </div>
                         </div>
 
@@ -304,7 +307,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -313,7 +316,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>1056</b> ₽</div>
                             </div>
                         </div>
 
@@ -346,7 +349,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -355,7 +358,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>536</b> ₽</div>
                             </div>
                         </div>
 
@@ -387,7 +390,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -396,7 +399,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -428,7 +431,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -437,7 +440,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -469,7 +472,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -478,7 +481,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -510,7 +513,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -519,7 +522,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -551,7 +554,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -560,7 +563,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -592,7 +595,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -601,7 +604,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -633,7 +636,7 @@
                                             <div class="col-goods">
                                                 <div class="number">
 
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
 
                                                 </div>
                                                 <span>Упаковок</span>
@@ -642,7 +645,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -674,7 +677,7 @@
                                             </div>
                                             <div class="col-goods">
                                                 <div class="number">
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
                                                 </div>
                                                 <span>Упаковок</span>
                                             </div>
@@ -682,7 +685,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -714,7 +717,7 @@
                                             </div>
                                             <div class="col-goods">
                                                 <div class="number">
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
                                                 </div>
                                                 <span>Упаковок</span>
                                             </div>
@@ -722,7 +725,7 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -754,7 +757,7 @@
                                             </div>
                                             <div class="col-goods">
                                                 <div class="number">
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
                                                 </div>
                                                 <span>Упаковок</span>
                                             </div>
@@ -762,7 +765,46 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
+                            </div>
+                        </div>
+                        <div class="catalog-elem">
+                            <a href="#">
+                                <div class="catalog-elem-img">
+                                    <img src="img/catalog-img12.jpg" alt="catalog-img12">
+                                </div>
+                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
+                            </a>
+                            <div class="catalog-elem-content">
+                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
+
+                                <div class="catalog-elem-country">Россия, Однополосный</div>
+                                <div class="catalog-elem-size">
+                                    <span>Размер:</span>
+                                    <b>1380 х 193 х 7</b>
+                                </div>
+                                <div class="catalog-elem-pack">
+                                    <span>Упаковка:</span>
+                                    <b><i>2,66</i> м<sup>2</sup></b>
+                                </div>
+                                <div class="catalog-elem-form">
+                                    <form action="/" method="POST">
+                                        <div class="catalog-elem-price-col">
+                                            <div class="price-box">
+                                                <div class="old-price">350 ₽ м<sup>2</sup></div>
+                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
+                                            </div>
+                                            <div class="col-goods">
+                                                <div class="number">
+                                                    <input class="quantity-num" type="number" min="1" value="1">
+                                                </div>
+                                                <span>Упаковок</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-in-cart">В корзину</button>
+                                    </form>
+                                </div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
@@ -794,7 +836,7 @@
                                             </div>
                                             <div class="col-goods">
                                                 <div class="number">
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
+                                                    <input class="quantity-num" type="number" min="1" value="1">
                                                 </div>
                                                 <span>Упаковок</span>
                                             </div>
@@ -802,49 +844,11 @@
                                         <button type="submit" class="btn-in-cart">В корзину</button>
                                     </form>
                                 </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
+                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>931</b> ₽</div>
                             </div>
                         </div>
 
-                        <div class="catalog-elem">
-                            <a href="#">
-                                <div class="catalog-elem-img">
-                                    <img src="img/catalog-img12.jpg" alt="catalog-img12">
-                                </div>
-                                <div class="catalog-elem-title">Ламинат Ideal Look ID 05 дуб лайк</div>
-                            </a>
-                            <div class="catalog-elem-content">
-                                <a href="javascript:void(0);" class="catalog-elem-fav active"></a>
 
-                                <div class="catalog-elem-country">Россия, Однополосный</div>
-                                <div class="catalog-elem-size">
-                                    <span>Размер:</span>
-                                    <b>1380 х 193 х 7</b>
-                                </div>
-                                <div class="catalog-elem-pack">
-                                    <span>Упаковка:</span>
-                                    <b><i>2,66</i> м<sup>2</sup></b>
-                                </div>
-                                <div class="catalog-elem-form">
-                                    <form action="/" method="POST">
-                                        <div class="catalog-elem-price-col">
-                                            <div class="price-box">
-                                                <div class="old-price">350 ₽ м<sup>2</sup></div>
-                                                <div class="price"><i>350</i> ₽/м<sup>2</sup></div>
-                                            </div>
-                                            <div class="col-goods">
-                                                <div class="number">
-                                                    <input class="quantity-num" type="number" min="1" value="1" readonly>
-                                                </div>
-                                                <span>Упаковок</span>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn-in-cart">В корзину</button>
-                                    </form>
-                                </div>
-                                <div class="catalog-elem-total-price">Итого: <i>7.98</i> м<sup>2</sup> за <b>150</b> ₽</div>
-                            </div>
-                        </div>
 
 
                     </div>

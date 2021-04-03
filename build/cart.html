@@ -28,7 +28,7 @@
 </head>
 
 <body class="vn">
-    <div class="wrapper wrapper-vn">
+    <div class="wrapper wrapper-vn" id="main">
         <header>
     <div class="header-top">
         <div class="container">
@@ -107,7 +107,7 @@
             </ul>
             <div class="search-vn">
                 <form action="/" method="POST">
-                    <input type="search" placeholder="Введите категорию, бренд или название товара...">
+                    <input type="search" placeholder="Бренд или название товара...">
                     <button type="submit"></button>
                 </form>
             </div>
@@ -116,7 +116,7 @@
     <div class="mobile-menu">
         <div class="search-mobile">
             <form action="/" method="POST">
-                <input type="search" placeholder="Введите категорию, бренд или название товара...">
+                <input type="search" placeholder="Бренд или название товара...">
                 <button type="submit"></button>
             </form>
         </div>
@@ -166,8 +166,10 @@
                     <div class="cart-items">
                         <div class="cart-item">
                             <div>
-                                <div class="cart-img"><img src="img/cart-laminat.jpg" alt="cart-laminat"></div>
-                                <a href="#" class="cart-title">Ламинат Ideal Look Id 04 Дуб Стайл</a>
+                                <a href="#" class="cart-title">
+                                    <div class="cart-img"><img src="img/cart-laminat.jpg" alt="cart-laminat"></div>
+                                    <span>Ламинат Ideal Look Id 04 Дуб Стайл</span>
+                                </a>
                             </div>
                             <div>
                                 <div class="price-box">
@@ -177,7 +179,7 @@
                                 <div class="col-goods">
                                     <div class="number">
 
-                                        <input class="quantity-num cart-variant--quantity_input" data-unit-price="350" data-box-metr="7.98" type="number" min="1" value="1" readonly="">
+                                        <input class="quantity-num cart-variant--quantity_input" data-unit-price="350" data-box-metr="7.98" type="number" min="1" value="1">
                                         <div class="quantity-nav">
                                             <div class="quantity-button number-plus">+</div>
                                             <div class="quantity-button number-minus">-</div>
@@ -188,15 +190,17 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="cart-total-price"><strong>Итого:</strong> <i>7.98</i><small>/м<sup>2</sup> за </small><b>150</b> ₽</div>
+                                <div class="cart-total-price"><strong>Итого:</strong> <i>7.98</i><small>/м<sup>2</sup> за </small><b>2793</b> ₽</div>
                             </div>
                             <button class="del-cart"></button>
                         </div>
 
                         <div class="cart-item">
                             <div>
-                                <div class="cart-img"><img src="img/cart-laminat.jpg" alt="cart-laminat"></div>
-                                <a href="#" class="cart-title">Ламинат Ideal Look Id 04 Дуб Стайл</a>
+                                <a href="#" class="cart-title">
+                                    <div class="cart-img"><img src="img/cart-laminat.jpg" alt="cart-laminat"></div>
+                                    <span>Ламинат Ideal Look Id 04 Дуб Стайл</span>
+                                </a>
                             </div>
                             <div>
                                 <div class="price-box">
@@ -205,7 +209,7 @@
                                 <div class="col-goods">
                                     <div class="number">
 
-                                        <input class="quantity-num cart-variant--quantity_input" data-unit-price="450" data-box-metr="7.98" type="number" min="1" value="1" readonly="">
+                                        <input class="quantity-num cart-variant--quantity_input" data-unit-price="450" data-box-metr="7.98" type="number" min="1" value="1">
                                         <div class="quantity-nav">
                                             <div class="quantity-button number-plus">+</div>
                                             <div class="quantity-button number-minus">-</div>
@@ -216,7 +220,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="cart-total-price"><strong>Итого:</strong> <i>7.98</i><small>/м<sup>2</sup> за </small><b>150</b> ₽</div>
+                                <div class="cart-total-price"><strong>Итого:</strong> <i>7.98</i><small>/м<sup>2</sup> за </small><b>3591</b> ₽</div>
                             </div>
                             <button class="del-cart"></button>
                         </div>
@@ -235,8 +239,8 @@
                             <div class="data-cart__left">
                                 <span>Способ получения</span>
                                 <div class="cart-delivery">
-                                    <label><input name="deliv" type="radio" value="Самовывоз со склада"> <span>Самовывоз со склада</span></label>
-                                    <label><input name="deliv" type="radio" value="Доставка курьером"> <span>Доставка курьером</span></label>
+                                    <label class="label-stock"><input checked name="deliv" type="radio" value="Самовывоз со склада"> <span>Самовывоз со склада</span></label>
+                                    <label class="label-courier"><input name="deliv" type="radio" value="Доставка курьером"> <span>Доставка курьером</span></label>
                                 </div>
                                 <div class="city-delivery">
                                     <select name="city-deliv" id="city-deliv">
@@ -246,26 +250,27 @@
                                         <option value="Ливны">Ливны</option>
                                     </select>
                                     <input type="text" placeholder="Введите адрес...">
+                                    <input class="input-curier" type="text" placeholder="Введите адрес доставки: город, улица, дом...">
                                 </div>
                                 <span>Способ оплаты</span>
                                 <div class="cart-pay">
                                     <label><input name="pay" type="radio" value="Оплата онлайн"> <span>Оплата онлайн</span></label>
-                                    <label><input name="pay" type="radio" value="Оплата курьеру"> <span>Оплата курьеру</span></label>
+                                    <label><input name="pay" type="radio" value="Оплата при получении"> <span>Оплата при получении</span></label>
                                 </div>
                             </div>
                             <div class="data-cart__right">
                                 <div class="cart-summ-box">
                                     <div class="cart-summ">
                                         <b>Сумма заказа:</b>
-                                        <span><i>2 759  </i>₽</span>
+                                        <span><i>6384  </i>₽</span>
                                     </div>
                                     <div class="cart-summ-deliv">
                                         <b>Стоимость доставки:</b>
-                                        <span><i>250  </i>₽</span>
+                                        <span><i>0  </i>₽</span>
                                     </div>
                                     <div class="cart-total-summ">
                                         <b>Итоговая сумма заказа:</b>
-                                        <span><i>2 759  </i>₽</span>
+                                        <span><i>6634  </i>₽</span>
                                     </div>
                                 </div>
 
@@ -319,6 +324,7 @@
             <a href="https://intrid.ru/" target="_blank" class="link-dev">made in intrid</a>
         </div>
     </div>
+    <a href="#main" class="anchor-up"></a>
 </footer>
 
 <div class="popup-wrap" id="popup-wrap-map">

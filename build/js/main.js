@@ -31,10 +31,27 @@ $(function() {
         });
     });
 
+    $(document).scroll(function() {
+        let scroll = $(window).scrollTop();
+        if (scroll >= 300) {
+            $('.anchor-up').addClass('active');
+        } else {
+            $('.anchor-up').removeClass('active');
+        }
+
+    });
+
     $("a.btn-catalog-anchor, .raiting a").click(function() {
         elementClick = $(this).attr("href")
         destination = $(elementClick).offset().top;
         $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination - 120 }, 700);
+        return false;
+    });
+
+    $(".anchor-up").click(function() {
+        elementClick = $(this).attr("href")
+        destination = $(elementClick).offset().top;
+        $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
         return false;
     });
 
@@ -60,11 +77,12 @@ $(function() {
         swipeToSlide: true,
         accessibility: false,
         responsive: [{
-            breakpoint: 705,
+            breakpoint: 706,
             settings: {
-                arrows: true,
+                arrows: false,
                 dots: true,
                 slidesToShow: 2,
+                swipeToSlide: true,
                 variableWidth: true,
                 centerMode: true
             }
@@ -121,7 +139,6 @@ $(function() {
 
     $('.card-desc').each(function() {
         var varMetrCard = $(this).find('.card-square b').text();
-        console.log(varMetrCard);
         var priceCard = $(this).find('.price i').text();
         var valColCard = $(this).find('.quantity-num');
         var totalPriceCard = $(this).find('.card-total-price b');
@@ -137,13 +154,14 @@ $(function() {
 
 
 
-
     $('.cart-item').each(function() {
         var varMetrCart = $(this).find('.cart-total-price i').text();
         var priceCart = $(this).find('.price i').text();
         var valColCart = $(this).find('.quantity-num');
         var totalPriceCart = $(this).find('.cart-total-price b');
         var totalMetrCart = $(this).find('.cart-total-price i');
+
+
 
         valColCart.on('change', function() {
             var totalPriceCartFixed = ($(this).val() * priceCart * varMetrCart).toFixed(0);
@@ -153,6 +171,8 @@ $(function() {
             totalMetrCart.text(metrToPointCart);
         });
     });
+
+
 
 
 
@@ -173,9 +193,30 @@ $(function() {
     }
 
 
+
     $('.cart-variant--quantity_input').on("change", function() {
         calcCart();
     });
+
+    $('.label-courier input').click(function() {
+        $('.cart-summ-deliv span i').text('250');
+        calcCart();
+        $('.city-delivery .nice-select').hide();
+        $('.city-delivery input').hide();
+        $('.input-curier').show();
+    });
+
+    $('.label-stock input').click(function() {
+        $('.cart-summ-deliv span i').text('0');
+        calcCart();
+        $('.city-delivery .nice-select').show();
+        $('.city-delivery input').show();
+        $('.input-curier').hide();
+    });
+
+    calcCart();
+
+
 
 
 
@@ -389,11 +430,11 @@ $(window).on('load resize', function() {
                 'border-radius': '50%',
                 'z-index': '9999999999',
                 'left': e.pageX - 25,
-                'top': e.pageY - 175,
+                'top': e.pageY - 25,
             });
             var cart = $('.cart').offset();
             console.log(cart);
-            $('.animtocart').animate({ top: cart.top - 200 + 'px', left: cart.left + 20 + 'px', width: 0, height: 0 }, 800, function() {
+            $('.animtocart').animate({ top: cart.top + 'px', left: cart.left + 20 + 'px', width: 0, height: 0 }, 800, function() {
                 $(this).remove();
             });
         });
