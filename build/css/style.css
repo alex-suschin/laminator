@@ -1881,14 +1881,20 @@ footer {
   margin-right: 0; }
 
 .link-dev {
+  display: block;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
   color: #000;
-  width: 115px;
+  width: 140px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   text-align: center;
-  background: url(../img/intrid.jpg) no-repeat center; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 0 4px 15px;
+  background: url(../img/intrid.png) no-repeat center; }
   .link-dev:hover {
     text-decoration: underline; }
 
