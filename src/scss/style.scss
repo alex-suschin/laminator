@@ -4871,6 +4871,7 @@ Ion.RangeSlider
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    z-index: 9999;
     box-shadow: 0px 40px 50px rgba(184, 187, 190, 0.5);
     @include transition;
     &:after {
