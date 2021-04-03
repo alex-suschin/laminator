@@ -111,7 +111,7 @@ $(function() {
         var totalPrice = $(this).find('.catalog-elem-total-price b');
         var totalMetr = $(this).find('.catalog-elem-total-price i');
         valCol.on('change', function() {
-            var totalPriceFixed = ($(this).val() * price * varMetr).toFixed(2);
+            var totalPriceFixed = ($(this).val() * price * varMetr).toFixed(0);
             totalPrice.text(totalPriceFixed);
             var metrSumm = $(this).val() * varMetr;
             var metrToPoint = metrSumm.toFixed(2);
@@ -127,7 +127,7 @@ $(function() {
         var totalPriceCard = $(this).find('.card-total-price b');
         var totalMetrCard = $(this).find('.card-total-price i');
         valColCard.on('change', function() {
-            var totalPriceCardFixed = ($(this).val() * priceCard * varMetrCard).toFixed(2);
+            var totalPriceCardFixed = ($(this).val() * priceCard * varMetrCard).toFixed(0);
             totalPriceCard.text(totalPriceCardFixed);
             var metrSummCard = $(this).val() * varMetrCard;
             var metrToPointCard = metrSummCard.toFixed(2);
@@ -146,7 +146,7 @@ $(function() {
         var totalMetrCart = $(this).find('.cart-total-price i');
 
         valColCart.on('change', function() {
-            var totalPriceCartFixed = ($(this).val() * priceCart * varMetrCart).toFixed(2);
+            var totalPriceCartFixed = ($(this).val() * priceCart * varMetrCart).toFixed(0);
             totalPriceCart.text(totalPriceCartFixed);
             var metrSummCart = $(this).val() * varMetrCart;
             var metrToPointCart = metrSummCart.toFixed(2);

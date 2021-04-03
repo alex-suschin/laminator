@@ -1031,9 +1031,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .catalog-elem-img {
     position: relative;
     height: 0;
-    padding-bottom: 81.67%;
+    padding-bottom: 75%;
     margin-bottom: 12px;
-    img {
+    img,
+    picture {
         position: absolute;
         top: 0;
         right: 0;
@@ -1067,6 +1068,9 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .catalog-elem-title {
     font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 38px;
     font-size: 16px;
     line-height: 19px;
     color: #474442;
@@ -5007,6 +5011,11 @@ M O B I L E
     }
     .catalog-elem:nth-child(5n) {
         margin-right: 26.7px;
+    }
+    .recommend .catalog-elem {
+        max-width: initial;
+        width: 17.57%;
+        margin-right: 18px;
     }
 }
 

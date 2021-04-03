@@ -49,17 +49,17 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Regular.eot");
-  src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Gilroy-SemiBold.eot");
+  src: url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-SemiBold.eot");
-  src: url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Gilroy-Regular.eot");
+  src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
@@ -1113,9 +1113,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .catalog-elem-img {
   position: relative;
   height: 0;
-  padding-bottom: 81.67%;
+  padding-bottom: 75%;
   margin-bottom: 12px; }
-  .catalog-elem-img img {
+  .catalog-elem-img img,
+  .catalog-elem-img picture {
     position: absolute;
     top: 0;
     right: 0;
@@ -1147,6 +1148,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .catalog-elem-title {
   font-weight: 500;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  height: 38px;
   font-size: 16px;
   line-height: 19px;
   color: #474442;
@@ -4989,7 +4994,11 @@ M O B I L E
     max-width: 240px;
     width: 100%; }
   .catalog-elem:nth-child(5n) {
-    margin-right: 26.7px; } }
+    margin-right: 26.7px; }
+  .recommend .catalog-elem {
+    max-width: initial;
+    width: 17.57%;
+    margin-right: 18px; } }
 
 @media screen and (max-width: 1340px) {
   .footer-top {
